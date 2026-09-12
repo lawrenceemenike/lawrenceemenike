@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sys-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050807"/>
+      <stop offset="50%" stop-color="#0A0E0D"/>
+      <stop offset="100%" stop-color="#141B19"/>
+    </linearGradient>
+
+    <pattern id="sys-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#18C7B5" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+
+    <linearGradient id="sys-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#18C7B5" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#F26A2E" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#18C7B5" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-ember" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .sys-hdr { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #18C7B5; letter-spacing: 2.5px; }
+    .sys-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #18C7B5; letter-spacing: 1px; }
+    .sys-tag-ember { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #F26A2E; letter-spacing: 1px; }
+    .sys-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; fill: #F3F0E7; letter-spacing: 0.3px; }
+    .sys-desc { font-family: 'Inter', sans-serif; font-size: 12px; fill: #8A9691; line-height: 1.5; }
+  </style>
+
+  <!-- Panel Base -->
+  <rect width="1000" height="440" rx="8" fill="url(#sys-bg)"/>
+  <rect width="1000" height="440" rx="8" fill="url(#sys-grid)"/>
+  <rect x="1" y="1" width="998" height="438" rx="7" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Dynamic Sentient Background Wave Morphing -->
+  <path fill="none" stroke="url(#sys-wave-grad)" stroke-width="2" filter="url(#glow-soft)">
+    <animate attributeName="d"
+             dur="8.5s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+             values="
+               M -50 320 C 220 180, 420 380, 650 220 C 820 120, 920 340, 1050 260;
+               M -50 210 C 180 340, 380 140, 650 310 C 800 220, 950 140, 1050 310;
+               M -50 280 C 250 120, 450 320, 650 180 C 850 350, 900 180, 1050 220;
+               M -50 320 C 220 180, 420 380, 650 220 C 820 120, 920 340, 1050 260
+             "/>
+  </path>
+
+  <!-- Top Terminal Header Bar -->
+  <path d="M 1 8 Q 1 1 8 1 L 992 1 Q 999 1 999 8 L 999 38 L 1 38 Z" fill="#060908" stroke="#18C7B5" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="1" y1="38" x2="999" y2="38" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Controls -->
+  <circle cx="24" cy="19" r="4.5" fill="#F26A2E" opacity="0.8"/>
+  <circle cx="38" cy="19" r="4.5" fill="#8A9691" opacity="0.4"/>
+  <circle cx="52" cy="19" r="4.5" fill="#18C7B5" opacity="0.6"/>
+
+  <text x="74" y="23" class="sys-hdr">SELECTED_SYSTEMS // ENTERPRISE_ARCHITECTURE_REGISTRY</text>
+  <text x="976" y="23" class="sys-hdr" text-anchor="end" fill="#8A9691" opacity="0.6">STATUS: ACTIVE_SPECS</text>
+
+  <!-- 4 SYSTEM BLOCKS GRID -->
+  <g transform="translate(24, 52)">
+
+    <!-- SYSTEM 01 -->
+    <g transform="translate(0, 0)">
+      <rect width="952" height="82" rx="6" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="82" stroke="#18C7B5" stroke-width="3" filter="url(#glow-soft)"/>
+      
+      <circle cx="24" cy="24" r="3" fill="#18C7B5">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+      <text x="36" y="28" class="sys-title">[ SYSTEM 01 ] AI READINESS &amp; MATURITY DIAGNOSTIC ENGINE</text>
+      <text x="800" y="28" class="sys-tag" text-anchor="end">[ SPEC // DEPLOYED ]</text>
+      
+      <text x="36" y="54" class="sys-desc">Assessing organizational readiness, priority use cases, data infrastructure maturity, risk exposure, and multi-year transformation pathways.</text>
+    </g>
+
+    <!-- SYSTEM 02 -->
+    <g transform="translate(0, 92)">
+      <rect width="952" height="82" rx="6" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="82" stroke="#18C7B5" stroke-width="3" filter="url(#glow-soft)"/>
+      
+      <circle cx="24" cy="24" r="3" fill="#18C7B5">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+      <text x="36" y="28" class="sys-title">[ SYSTEM 02 ] GOVERNANCE CONTROL &amp; OVERSIGHT SPEC</text>
+      <text x="800" y="28" class="sys-tag" text-anchor="end">[ SPEC // ACTIVE ]</text>
+      
+      <text x="36" y="54" class="sys-desc">Operationalizing policy engines, human-in-the-loop oversight models, model risk classification, auditability, and compliance alignment.</text>
+    </g>
+
+    <!-- SYSTEM 03 -->
+    <g transform="translate(0, 184)">
+      <rect width="952" height="82" rx="6" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="82" stroke="#18C7B5" stroke-width="3" filter="url(#glow-soft)"/>
+      
+      <circle cx="24" cy="24" r="3" fill="#18C7B5">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+      <text x="36" y="28" class="sys-title">[ SYSTEM 03 ] FINAI VALUE &amp; COST MODEL ENGINE</text>
+      <text x="800" y="28" class="sys-tag" text-anchor="end">[ SPEC // ONLINE ]</text>
+      
+      <text x="36" y="54" class="sys-desc">Quantifying token unit economics, infra operating assumptions, FinOps controls, commercial margin impact, and financial decision support.</text>
+    </g>
+
+    <!-- SYSTEM 04 (Ember Security Highlight) -->
+    <g transform="translate(0, 276)">
+      <rect width="952" height="82" rx="6" fill="#080C0B" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="82" stroke="#F26A2E" stroke-width="3" filter="url(#glow-ember)"/>
+      
+      <circle cx="24" cy="24" r="3.5" fill="#F26A2E">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+      </circle>
+      <text x="36" y="28" class="sys-title" fill="#F3F0E7">[ SYSTEM 04 ] AGENTIC AI SECURITY &amp; TRUST LAB</text>
+      <text x="800" y="28" class="sys-tag-ember" text-anchor="end">[ SPEC // CRITICAL_DEFENSE ]</text>
+      
+      <text x="36" y="54" class="sys-desc">Practical security research into prompt-injection countermeasures, tool permission boundaries, sandboxing &amp; safe multi-agent execution.</text>
+    </g>
+
+  </g>
+
+  <!-- Corner Brackets -->
+  <path d="M 1 20 L 1 1 L 20 1" stroke="#18C7B5" stroke-opacity="0.5" stroke-width="1.5" fill="none"/>
+  <path d="M 980 439 L 999 439 L 999 420" stroke="#18C7B5" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+</svg>

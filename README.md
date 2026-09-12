@@ -6,7 +6,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 -->
 
 <p align="center">
-  <img src="./assets/nelc-signal-hero.svg?v=5" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
+  <img src="./assets/nelc-signal-hero.svg?v=6" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ---
 
 <p align="center">
-  <img src="./assets/positioning-card.svg?v=5" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+  <img src="./assets/positioning-card.svg?v=6" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
 </p>
 
 ---
@@ -28,7 +28,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 01 / SYSTEM MANIFEST
 
 <p align="center">
-  <img src="./assets/manifest-card.svg?v=5" alt="System Manifest Card" width="100%" />
+  <img src="./assets/manifest-card.svg?v=6" alt="System Manifest Card" width="100%" />
 </p>
 
 ---
@@ -36,35 +36,16 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 02 / OPERATING DOMAINS
 
 <p align="center">
-  <img src="./assets/domain-cards.svg?v=5" alt="NELC Operating Domains" width="100%" />
+  <img src="./assets/domain-cards.svg?v=6" alt="NELC Operating Domains" width="100%" />
 </p>
 
 ---
 
 ## 03 / SELECTED SYSTEMS & FRAMEWORKS
 
-Enterprise-ready architecture patterns, governance frameworks, and technical specifications:
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ [ SYSTEM 01 ]  AI READINESS & MATURITY DIAGNOSTIC LAYER                      │
-│                Assessing organizational readiness, priority use cases,      │
-│                data infrastructure maturity, risk exposure, and multi-year  │
-│                transformation pathways.                                     │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ [ SYSTEM 02 ]  GOVERNANCE CONTROL & OVERSIGHT SPEC                          │
-│                Operationalizing policy, human-in-the-loop oversight models, │
-│                risk classification, auditability, and regulatory alignment. │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ [ SYSTEM 03 ]  FINAI VALUE & COST MODEL ENGINE                              │
-│                Quantifying token unit economics, infra operating assumptions│
-│                commercial impact, and financial decision support.           │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ [ SYSTEM 04 ]  AGENTIC AI SECURITY & TRUST LAB                              │
-│                Practical research & test suits into prompt-injection        │
-│                defenses, agent permissions, trust boundaries, & workflows.  │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="./assets/systems-card.svg?v=6" alt="NELC Selected Systems & Enterprise Frameworks" width="100%" />
+</p>
 
 ---
 
@@ -89,7 +70,7 @@ Curated writing, architectural frameworks, and research papers on AI implementat
 ## 05 / SIGNATURE SIGNAL FIELD
 
 <p align="center">
-  <img src="./assets/signal-field.svg?v=5" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
+  <img src="./assets/signal-field.svg?v=6" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
 </p>
 
 ---
