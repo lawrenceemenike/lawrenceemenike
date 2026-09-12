@@ -6,7 +6,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 -->
 
 <p align="center">
-  <img src="./assets/nelc-signal-hero.svg?v=8" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
+  <img src="./assets/nelc-signal-hero.svg?v=9" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ---
 
 <p align="center">
-  <img src="./assets/positioning-card.svg?v=8" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+  <img src="./assets/positioning-card.svg?v=9" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
 </p>
 
 ---
@@ -28,7 +28,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 01 / SYSTEM MANIFEST
 
 <p align="center">
-  <img src="./assets/manifest-card.svg?v=8" alt="System Manifest Card" width="100%" />
+  <img src="./assets/manifest-card.svg?v=9" alt="System Manifest Card" width="100%" />
 </p>
 
 ---
@@ -36,7 +36,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 02 / OPERATING DOMAINS
 
 <p align="center">
-  <img src="./assets/domain-cards.svg?v=8" alt="NELC Operating Domains" width="100%" />
+  <img src="./assets/domain-cards.svg?v=9" alt="NELC Operating Domains" width="100%" />
 </p>
 
 ---
@@ -44,7 +44,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 03 / SELECTED SYSTEMS & FRAMEWORKS
 
 <p align="center">
-  <img src="./assets/systems-card.svg?v=8" alt="NELC Selected Systems & Enterprise Frameworks" width="100%" />
+  <img src="./assets/systems-card.svg?v=9" alt="NELC Selected Systems & Enterprise Frameworks" width="100%" />
 </p>
 
 ---
@@ -52,30 +52,27 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 04 / SIGNALS // THOUGHT LEADERSHIP
 
 <p align="center">
-  <img src="./assets/signals-card.svg?v=8" alt="NELC Thought Leadership Signals Header Card" width="100%" />
+  <img src="./assets/signals-card.svg?v=9" alt="NELC Thought Leadership Signals Graphic Card" width="100%" />
 </p>
 
-- **`SIGNAL_001`** — [**The Economics of AI: From Labor Substitution to Complementarities**](https://lawrence-emenike.medium.com/the-economics-of-ai-from-labor-substitution-to-complementarities-531f235780bc)  
-  *Analyzing macroeconomic shifts, labor market impacts, and how enterprise AI transitions from task replacement to value complementarities.*
+<div align="center">
 
-- **`SIGNAL_002`** — [**Transforming Pricing: How Agentic AI Rewrites Commercial Economics**](https://medium.com/@lawrence-emenike/transforming-pricing-how-agentic-ai-rewrites-commercial-economics-bb5df865d4c2)  
-  *Deconstructing value-based pricing, unit margin shifts, and automated commercial decision models for autonomous agent workflows.*
+| Signal ID | Article Title | Medium Article Link |
+| :--- | :--- | :--- |
+| **`SIGNAL_001`** | **The Economics of AI: Labor Substitution to Complementarities** | [**Read Article ↗**](https://lawrence-emenike.medium.com/the-economics-of-ai-from-labor-substitution-to-complementarities-531f235780bc) |
+| **`SIGNAL_002`** | **Transforming Pricing: How Agentic AI Rewrites Commercial Economics** | [**Read Article ↗**](https://medium.com/@lawrence-emenike/transforming-pricing-how-agentic-ai-rewrites-commercial-economics-bb5df865d4c2) |
+| **`SIGNAL_003`** | **Why “Attention Is All You Need” Changed Everything (And How It Works)** | [**Read Article ↗**](https://medium.com/@lawrence-emenike/why-attention-is-all-you-need-changed-everything-and-how-it-works-e25b770aebd2) |
+| **`SIGNAL_004`** | **Audit Trails and Explainability for Compliance: Transparency Layer** | [**Read Article ↗**](https://medium.com/@lawrence-emenike/audit-trails-and-explainability-for-compliance-building-the-transparency-layer-financial-services-d24961bad987) |
+| **`SIGNAL_005`** | **An Executive Playbook to Building Voice AI Agents** | [**Read Article ↗**](https://medium.com/@lawrence-emenike/an-executive-playbook-to-building-voice-ai-agents-b2101bb46923) |
 
-- **`SIGNAL_003`** — [**Why “Attention Is All You Need” Changed Everything (And How It Works)**](https://medium.com/@lawrence-emenike/why-attention-is-all-you-need-changed-everything-and-how-it-works-e25b770aebd2)  
-  *Demystifying transformer architectures, self-attention mechanisms, and the mathematical foundation of modern generative AI systems.*
-
-- **`SIGNAL_004`** — [**Audit Trails and Explainability for Compliance: Building the Transparency Layer Financial Services Cannot Ignore**](https://medium.com/@lawrence-emenike/audit-trails-and-explainability-for-compliance-building-the-transparency-layer-financial-services-d24961bad987)  
-  *Designing audit-ready governance frameworks, model explainability, and regulatory compliance layers for financial institutions.*
-
-- **`SIGNAL_005`** — [**An Executive Playbook to Building Voice AI Agents**](https://medium.com/@lawrence-emenike/an-executive-playbook-to-building-voice-ai-agents-b2101bb46923)  
-  *Strategic engineering framework for low-latency turn-taking models, real-time voice synthesis, and production agent deployment.*
+</div>
 
 ---
 
 ## 05 / SIGNATURE SIGNAL FIELD
 
 <p align="center">
-  <img src="./assets/signal-field.svg?v=8" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
+  <img src="./assets/signal-field.svg?v=9" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
 </p>
 
 ---
