@@ -6,7 +6,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 -->
 
 <p align="center">
-  <img src="./assets/nelc-signal-hero.svg" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
+  <img src="./assets/nelc-signal-hero.svg?v=3" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ---
 
 <p align="center">
-  <img src="./assets/positioning-card.svg" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+  <img src="./assets/positioning-card.svg?v=3" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
 </p>
 
 ---
@@ -28,7 +28,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 01 / SYSTEM MANIFEST
 
 <p align="center">
-  <img src="./assets/manifest-card.svg" alt="System Manifest Card" width="100%" />
+  <img src="./assets/manifest-card.svg?v=3" alt="System Manifest Card" width="100%" />
 </p>
 
 ```gcode
@@ -53,7 +53,7 @@ STATUS       :: Designing intelligent operating systems for enterprise & fintech
 ## 02 / OPERATING DOMAINS
 
 <p align="center">
-  <img src="./assets/domain-cards.svg" alt="NELC Operating Domains" width="100%" />
+  <img src="./assets/domain-cards.svg?v=3" alt="NELC Operating Domains" width="100%" />
 </p>
 
 <table width="100%">
@@ -145,7 +145,7 @@ Curated writing, architectural frameworks, and research papers on AI implementat
 ## 05 / SIGNATURE SIGNAL FIELD
 
 <p align="center">
-  <img src="./assets/signal-field.svg" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
+  <img src="./assets/signal-field.svg?v=3" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
 </p>
 
 ---

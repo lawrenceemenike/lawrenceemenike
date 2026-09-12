@@ -2,23 +2,24 @@
   <defs>
     <!-- Dark graphite gradient background -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060A09"/>
+      <stop offset="0%" stop-color="#050807"/>
       <stop offset="50%" stop-color="#0A0E0D"/>
       <stop offset="100%" stop-color="#141B19"/>
     </linearGradient>
 
     <!-- Animated Signal Teal Beam -->
-    <linearGradient id="teal-beam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#18C7B5" stop-opacity="1"/>
+    <linearGradient id="teal-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0.1"/>
+      <stop offset="25%" stop-color="#18C7B5" stop-opacity="0.95"/>
       <stop offset="70%" stop-color="#0D8E86" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#F26A2E" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#18C7B5" stop-opacity="0.2"/>
     </linearGradient>
 
-    <!-- Secondary Ember Beam -->
-    <linearGradient id="ember-beam" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Animated Ember Wave Beam -->
+    <linearGradient id="ember-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#F26A2E" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#F26A2E" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#F26A2E" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="#F26A2E" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#18C7B5" stop-opacity="0"/>
     </linearGradient>
 
@@ -47,68 +48,19 @@
       <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#8A9691" stroke-opacity="0.025" stroke-width="0.5"/>
     </pattern>
 
-    <!-- Glow Filter -->
+    <!-- Glow Filters -->
     <filter id="glow-filter" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="5" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
 
-    <filter id="glow-heavy" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
   <style>
-    /* CSS Animations for GitHub Markdown SVG rendering */
-    @keyframes flow-trace-1 {
-      0% { stroke-dashoffset: 1200; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes flow-trace-2 {
-      0% { stroke-dashoffset: -1000; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes pulse-ember-node {
-      0% { r: 14px; opacity: 0.5; }
-      50% { r: 24px; opacity: 1.0; }
-      100% { r: 14px; opacity: 0.5; }
-    }
-    @keyframes pulse-beacon {
-      0% { opacity: 0.3; transform: scale(0.9); }
-      50% { opacity: 1; transform: scale(1.1); }
-      100% { opacity: 0.3; transform: scale(0.9); }
-    }
-    @keyframes scanline-move {
-      0% { transform: translateY(-10px); opacity: 0; }
-      50% { opacity: 0.15; }
-      100% { transform: translateY(370px); opacity: 0; }
-    }
-    @keyframes text-glow {
-      0% { text-shadow: 0 0 2px rgba(24, 199, 181, 0.2); }
-      50% { text-shadow: 0 0 12px rgba(24, 199, 181, 0.8), 0 0 20px rgba(24, 199, 181, 0.4); }
-      100% { text-shadow: 0 0 2px rgba(24, 199, 181, 0.2); }
-    }
-
-    .anim-stream-1 {
-      stroke-dasharray: 200 400;
-      animation: flow-trace-1 12s linear infinite;
-    }
-    .anim-stream-2 {
-      stroke-dasharray: 150 350;
-      animation: flow-trace-2 9s linear infinite;
-    }
-    .anim-ember-pulse {
-      transform-origin: 520px 160px;
-      animation: pulse-ember-node 3.5s ease-in-out infinite;
-    }
-    .anim-status-dot {
-      animation: pulse-beacon 2s ease-in-out infinite;
-    }
-    .anim-scanline {
-      animation: scanline-move 8s ease-in-out infinite;
-    }
-
     .title-main { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; fill: #F3F0E7; font-size: 38px; letter-spacing: 2px; }
     .title-sub { font-family: 'JetBrains Mono', monospace; font-weight: 500; fill: #8A9691; font-size: 13px; letter-spacing: 3px; }
     .tag-mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #18C7B5; letter-spacing: 1.5px; }
@@ -121,9 +73,6 @@
   <rect width="1000" height="360" rx="8" fill="url(#subgrid-pattern)"/>
   <rect width="1000" height="360" rx="8" fill="url(#grid-pattern)"/>
 
-  <!-- Dynamic Scanline Sweep across grid -->
-  <line x1="0" y1="0" x2="1000" y2="0" stroke="#18C7B5" stroke-width="2" class="anim-scanline" filter="url(#glow-filter)"/>
-
   <!-- Border Lines & Frame Corner Brackets -->
   <rect x="1" y="1" width="998" height="358" rx="7" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
   <path d="M 1 24 L 1 1 L 24 1" stroke="#18C7B5" stroke-width="2" fill="none" filter="url(#glow-filter)"/>
@@ -131,45 +80,103 @@
   <path d="M 999 336 L 999 359 L 976 359" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="2" fill="none"/>
   <path d="M 24 359 L 1 359 L 1 336" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="2" fill="none"/>
 
-  <!-- DYNAMIC LIGHT TRAILS & SIGNAL FLOWS -->
-  <g stroke-linecap="round">
-    <!-- Static Base Trace -->
-    <path d="M -50 280 C 200 280, 250 140, 500 140 C 750 140, 800 60, 1050 60" fill="none" stroke="#18C7B5" stroke-opacity="0.15" stroke-width="1.5"/>
-    
-    <!-- DYNAMIC FLOWING SIGNAL BEAM 1 (Teal Stream) -->
-    <path d="M -50 280 C 200 280, 250 140, 500 140 C 750 140, 800 60, 1050 60" fill="none" stroke="url(#teal-beam)" stroke-width="3" class="anim-stream-1" filter="url(#glow-heavy)"/>
+  <!-- Geometric Grid Ray Traces -->
+  <line x1="620" y1="0" x2="820" y2="360" stroke="#18C7B5" stroke-opacity="0.08" stroke-dasharray="4 4"/>
+  <line x1="720" y1="0" x2="920" y2="360" stroke="#18C7B5" stroke-opacity="0.05"/>
+  <line x1="150" y1="0" x2="350" y2="360" stroke="#8A9691" stroke-opacity="0.05" stroke-dasharray="2 4"/>
 
-    <!-- DYNAMIC FLOWING SIGNAL BEAM 2 (Secondary Wave) -->
-    <path d="M -50 300 C 220 300, 270 160, 520 160 C 770 160, 820 80, 1050 80" fill="none" stroke="url(#ember-beam)" stroke-width="2.5" class="anim-stream-2" filter="url(#glow-filter)"/>
+  <!-- ========================================================================= -->
+  <!-- SENTIENT WAVE ORGANISM — SMIL PATH MORPHING ANIMATIONS                     -->
+  <!-- ========================================================================= -->
 
-    <!-- Geometric Data Rays -->
-    <line x1="620" y1="0" x2="820" y2="360" stroke="#18C7B5" stroke-opacity="0.08" stroke-dasharray="4 4"/>
-    <line x1="720" y1="0" x2="920" y2="360" stroke="#18C7B5" stroke-opacity="0.05"/>
-    <line x1="150" y1="0" x2="350" y2="360" stroke="#8A9691" stroke-opacity="0.05" stroke-dasharray="2 4"/>
-  </g>
+  <!-- WAVE 1: PRIMARY TEAL SENTIENT SIGNAL WAVE (Heavy Glow + Morphing Bezier) -->
+  <path fill="none" stroke="url(#teal-wave-grad)" stroke-width="3.5" filter="url(#glow-heavy)">
+    <animate attributeName="d"
+             dur="7s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+             values="
+               M -50 280 C 200 280, 250 140, 500 140 C 750 140, 800 60, 1050 60;
+               M -50 180 C 180 80, 320 290, 500 170 C 680 60, 850 240, 1050 100;
+               M -50 220 C 250 320, 380 90, 500 240 C 720 280, 780 120, 1050 220;
+               M -50 310 C 160 160, 280 250, 500 120 C 740 220, 860 80, 1050 160;
+               M -50 280 C 200 280, 250 140, 500 140 C 750 140, 800 60, 1050 60
+             "/>
+  </path>
 
-  <!-- ANIMATED NODES & BEACONS -->
-  
-  <!-- Primary Ember Node with Breathing Pulse -->
+  <!-- WAVE 2: SECONDARY EMBER SENTIENT ENERGY WAVE (Counter-Motion Morphing) -->
+  <path fill="none" stroke="url(#ember-wave-grad)" stroke-width="2.5" filter="url(#glow-filter)">
+    <animate attributeName="d"
+             dur="9s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+             values="
+               M -50 300 C 220 300, 270 160, 520 160 C 770 160, 820 80, 1050 80;
+               M -50 240 C 280 340, 350 110, 520 230 C 690 100, 890 280, 1050 140;
+               M -50 160 C 190 70, 290 260, 520 100 C 750 240, 810 50, 1050 260;
+               M -50 270 C 210 210, 310 180, 520 200 C 730 110, 840 190, 1050 90;
+               M -50 300 C 220 300, 270 160, 520 160 C 770 160, 820 80, 1050 80
+             "/>
+  </path>
+
+  <!-- WAVE 3: TERTIARY HIGH-FREQUENCY TEAL RIPPLE -->
+  <path fill="none" stroke="#18C7B5" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="8 6">
+    <animate attributeName="d"
+             dur="6s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+             values="
+               M -50 150 C 150 220, 300 80, 500 190 C 700 300, 850 110, 1050 180;
+               M -50 290 C 200 110, 350 270, 500 130 C 650 70, 800 240, 1050 90;
+               M -50 180 C 220 310, 280 150, 500 260 C 720 120, 880 290, 1050 210;
+               M -50 210 C 170 140, 320 200, 500 80 C 680 250, 830 150, 1050 120;
+               M -50 150 C 150 220, 300 80, 500 190 C 700 300, 850 110, 1050 180
+             "/>
+  </path>
+
+  <!-- ========================================================================= -->
+  <!-- DYNAMIC SENTIENT NODES (Moving vertically/horizontally along waves)       -->
+  <!-- ========================================================================= -->
+
+  <!-- Primary Ember Node Floating Dynamically -->
   <g transform="translate(0, 0)">
-    <circle cx="520" cy="160" r="18" fill="url(#ember-glow-dynamic)" class="anim-ember-pulse"/>
-    <circle cx="520" cy="160" r="4.5" fill="#F26A2E" filter="url(#glow-filter)"/>
-    <circle cx="520" cy="160" r="9" fill="none" stroke="#F26A2E" stroke-opacity="0.8" stroke-width="1.5"/>
-    <text x="536" y="155" class="tag-mono" fill="#F26A2E" font-size="9.5" font-weight="700">NODE // 01 [SECURE_ACTIVE]</text>
+    <circle cx="520" cy="160" r="18" fill="url(#ember-glow-dynamic)">
+      <animate attributeName="cy" dur="7s" repeatCount="indefinite" values="160; 170; 240; 120; 160" />
+      <animate attributeName="r" dur="3s" repeatCount="indefinite" values="14; 22; 14" />
+    </circle>
+    <circle cx="520" cy="160" r="4.5" fill="#F26A2E" filter="url(#glow-filter)">
+      <animate attributeName="cy" dur="7s" repeatCount="indefinite" values="160; 170; 240; 120; 160" />
+    </circle>
+    <circle cx="520" cy="160" r="9" fill="none" stroke="#F26A2E" stroke-opacity="0.8" stroke-width="1.5">
+      <animate attributeName="cy" dur="7s" repeatCount="indefinite" values="160; 170; 240; 120; 160" />
+    </circle>
+    <text x="536" y="155" class="tag-mono" fill="#F26A2E" font-size="9.5" font-weight="700">
+      <animate attributeName="y" dur="7s" repeatCount="indefinite" values="155; 165; 235; 115; 155" />
+      NODE // 01 [SENTIENT_ACTIVE]
+    </text>
   </g>
 
-  <!-- Node 2: Pulsing Teal Node -->
+  <!-- Node 2: Teal Floating Node -->
   <g>
-    <circle cx="270" cy="160" r="12" fill="url(#teal-glow-dynamic)" class="anim-status-dot"/>
-    <circle cx="270" cy="160" r="3.5" fill="#18C7B5"/>
-    <circle cx="270" cy="160" r="7" fill="none" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="1"/>
+    <circle cx="270" cy="160" r="12" fill="url(#teal-glow-dynamic)">
+      <animate attributeName="cy" dur="9s" repeatCount="indefinite" values="160; 100; 220; 140; 160" />
+    </circle>
+    <circle cx="270" cy="160" r="3.5" fill="#18C7B5">
+      <animate attributeName="cy" dur="9s" repeatCount="indefinite" values="160; 100; 220; 140; 160" />
+    </circle>
   </g>
 
-  <!-- Node 3: Top Right Teal Node -->
+  <!-- Node 3: Top Right Floating Teal Node -->
   <g>
-    <circle cx="770" cy="80" r="14" fill="url(#teal-glow-dynamic)" class="anim-status-dot"/>
-    <circle cx="770" cy="80" r="4" fill="#18C7B5"/>
-    <circle cx="770" cy="80" r="9" fill="none" stroke="#18C7B5" stroke-opacity="0.5" stroke-width="1"/>
+    <circle cx="770" cy="80" r="14" fill="url(#teal-glow-dynamic)">
+      <animate attributeName="cy" dur="6s" repeatCount="indefinite" values="80; 140; 60; 120; 80" />
+    </circle>
+    <circle cx="770" cy="80" r="4" fill="#18C7B5">
+      <animate attributeName="cy" dur="6s" repeatCount="indefinite" values="80; 140; 60; 120; 80" />
+    </circle>
   </g>
 
   <!-- Top System Header Bar -->
@@ -189,10 +196,13 @@
       Turning AI ambition into governed, secure, commercially intelligent systems.
     </text>
 
-    <!-- Operational Status Pill with Live Pulse Dot -->
+    <!-- Operational Status Pill -->
     <g transform="translate(0, 105)">
       <rect x="0" y="0" width="325" height="28" rx="4" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.5" stroke-width="1"/>
-      <circle cx="16" cy="14" r="4" fill="#18C7B5" class="anim-status-dot" filter="url(#glow-filter)"/>
+      <circle cx="16" cy="14" r="4" fill="#18C7B5" filter="url(#glow-filter)">
+        <animate attributeName="r" dur="2s" repeatCount="indefinite" values="3; 5; 3" />
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+      </circle>
       <circle cx="16" cy="14" r="7" fill="none" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="1"/>
       <text x="32" y="18" class="pill-text">STATUS: BUILDING THE AI OPERATING LAYER</text>
     </g>
@@ -207,19 +217,19 @@
 
     <g transform="translate(0, 24)">
       <!-- Domain 1 -->
-      <circle cx="6" cy="-4" r="3" fill="#18C7B5" class="anim-status-dot"/>
+      <circle cx="6" cy="-4" r="3" fill="#18C7B5"/>
       <text x="16" y="0" class="nav-label">AI STRATEGY</text>
 
       <!-- Domain 2 -->
-      <circle cx="236" cy="-4" r="3" fill="#18C7B5" class="anim-status-dot"/>
+      <circle cx="236" cy="-4" r="3" fill="#18C7B5"/>
       <text x="246" y="0" class="nav-label">GOVERNANCE &amp; RISK</text>
 
       <!-- Domain 3 -->
-      <circle cx="506" cy="-4" r="3" fill="#F26A2E" class="anim-status-dot"/>
+      <circle cx="506" cy="-4" r="3" fill="#F26A2E"/>
       <text x="516" y="0" class="nav-label" fill="#F3F0E7">AI SECURITY</text>
 
       <!-- Domain 4 -->
-      <circle cx="736" cy="-4" r="3" fill="#18C7B5" class="anim-status-dot"/>
+      <circle cx="736" cy="-4" r="3" fill="#18C7B5"/>
       <text x="746" y="0" class="nav-label">FINAI &amp; VALUE</text>
     </g>
   </g>
