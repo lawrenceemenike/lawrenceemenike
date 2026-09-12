@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NELC // SIGNAL ROOM — GitHub Profile Studio</title>
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Studio Top Navigation -->
+  <header class="studio-header">
+    <div class="brand-title">
+      <h1>NELC // SIGNAL ROOM</h1>
+      <span class="brand-tag">INTELLIGENCE STUDIO V2.6</span>
+    </div>
+    
+    <nav class="studio-nav">
+      <button class="nav-btn active" data-tab="live-view">Live Profile View</button>
+      <button class="nav-btn" data-tab="asset-studio">SVG Asset Gallery</button>
+      <button class="nav-btn" data-tab="markdown-source">Markdown Source</button>
+      <button class="nav-btn btn-ember" id="copy-markdown-top">⚡ Copy README.md</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+    <!-- TAB 1: LIVE GITHUB PROFILE PREVIEW -->
+    <section id="live-view" class="tab-view active">
+      <div class="github-profile-frame">
+        <div class="profile-bar">
+          <span>📁 USER_PROFILE / README.md</span>
+          <span>ENVIRONMENT: GITHUB_DARK_MODE</span>
+        </div>
+        
+        <div id="markdown-rendered-content">
+          <!-- Dynamically loaded / rendered profile content -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: SVG ASSET GALLERY -->
+    <section id="asset-studio" class="tab-view">
+      <div class="gallery-grid">
+        
+        <!-- Hero Banner Asset -->
+        <article class="asset-card asset-card-full">
+          <div class="asset-header">
+            <span>ASSET // nelc-signal-hero.svg</span>
+            <span>Dimensions: 1000 × 360 | Vector SVG</span>
+          </div>
+          <div class="asset-preview">
+            <img src="./assets/nelc-signal-hero.svg" alt="NELC Hero Banner" style="width: 100%; max-width: 960px;" />
+          </div>
+          <div class="asset-actions">
+            <button class="action-btn" onclick="copyAssetCode('hero')">Copy SVG Code</button>
+            <a href="./assets/nelc-signal-hero.svg" download="nelc-signal-hero.svg" class="action-btn">Download SVG</a>
+          </div>
+        </article>
+
+        <!-- Manifest Card Asset -->
+        <article class="asset-card">
+          <div class="asset-header">
+            <span>ASSET // manifest-card.svg</span>
+            <span>Dimensions: 900 × 310</span>
+          </div>
+          <div class="asset-preview">
+            <img src="./assets/manifest-card.svg" alt="Manifest Card" style="width: 100%;" />
+          </div>
+          <div class="asset-actions">
+            <button class="action-btn" onclick="copyAssetCode('manifest')">Copy SVG Code</button>
+            <a href="./assets/manifest-card.svg" download="manifest-card.svg" class="action-btn">Download SVG</a>
+          </div>
+        </article>
+
+        <!-- Operating Domains Asset -->
+        <article class="asset-card">
+          <div class="asset-header">
+            <span>ASSET // domain-cards.svg</span>
+            <span>Dimensions: 900 × 360</span>
+          </div>
+          <div class="asset-preview">
+            <img src="./assets/domain-cards.svg" alt="Operating Domains Grid" style="width: 100%;" />
+          </div>
+          <div class="asset-actions">
+            <button class="action-btn" onclick="copyAssetCode('domain')">Copy SVG Code</button>
+            <a href="./assets/domain-cards.svg" download="domain-cards.svg" class="action-btn">Download SVG</a>
+          </div>
+        </article>
+
+        <!-- Signal Field Artwork Asset -->
+        <article class="asset-card asset-card-full">
+          <div class="asset-header">
+            <span>ASSET // signal-field.svg (Signature Abstract Network Artwork)</span>
+            <span>Dimensions: 900 × 240</span>
+          </div>
+          <div class="asset-preview">
+            <img src="./assets/signal-field.svg" alt="Signal Field Artwork" style="width: 100%; max-width: 960px;" />
+          </div>
+          <div class="asset-actions">
+            <button class="action-btn" onclick="copyAssetCode('field')">Copy SVG Code</button>
+            <a href="./assets/signal-field.svg" download="signal-field.svg" class="action-btn">Download SVG</a>
+          </div>
+        </article>
+
+        <!-- Status Badge Asset -->
+        <article class="asset-card">
+          <div class="asset-header">
+            <span>ASSET // status-badge.svg</span>
+            <span>Dimensions: 340 × 32</span>
+          </div>
+          <div class="asset-preview">
+            <img src="./assets/status-badge.svg" alt="Status Badge" style="max-width: 340px;" />
+          </div>
+          <div class="asset-actions">
+            <button class="action-btn" onclick="copyAssetCode('badge')">Copy SVG Code</button>
+            <a href="./assets/status-badge.svg" download="status-badge.svg" class="action-btn">Download SVG</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: MARKDOWN SOURCE CODE -->
+    <section id="markdown-source" class="tab-view">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-family: var(--font-mono); font-size: 1rem; color: var(--color-teal);">RAW MARKDOWN SOURCE (README.md)</h3>
+        <button class="nav-btn btn-ember" id="copy-markdown-source-btn">⚡ Copy Raw Markdown</button>
+      </div>
+      <pre class="source-box" id="raw-markdown-text">Loading README.md source...</pre>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Action completed successfully</div>
+
+  <!-- App Script -->
+  <script src="app.js"></script>
+</body>
+</html>

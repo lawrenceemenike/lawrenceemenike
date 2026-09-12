@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 32" width="340" height="32">
+  <defs>
+    <linearGradient id="sb-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A0E0D"/>
+      <stop offset="100%" stop-color="#141B19"/>
+    </linearGradient>
+    <filter id="sb-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="340" height="32" rx="4" fill="url(#sb-bg)"/>
+  <rect x="0.5" y="0.5" width="339" height="31" rx="3.5" fill="none" stroke="#18C7B5" stroke-opacity="0.4" stroke-width="1"/>
+
+  <circle cx="16" cy="16" r="4" fill="#18C7B5" filter="url(#sb-glow)"/>
+  <circle cx="16" cy="16" r="7" fill="none" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="1"/>
+
+  <text x="32" y="20" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#F3F0E7" letter-spacing="1">STATUS: BUILDING THE AI OPERATING LAYER</text>
+</svg>
