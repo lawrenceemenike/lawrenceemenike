@@ -19,11 +19,9 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 
 ---
 
-### `// POSITIONING STATEMENT`
-
-> *"Turning AI ambition into governed, secure, commercially intelligent systems."*
-
-I design, build, and deploy the **operating layer** for AI adoption in enterprise organizations, banks, fintechs, and high-growth technology companies. Rather than treating AI as disconnected tools or speculative pilots, I focus on building **resilient operating models, governance control boundaries, secure agentic architectures, and verifiable economic models**.
+<p align="center">
+  <img src="./assets/positioning-card.svg" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+</p>
 
 ---
 
@@ -60,7 +58,7 @@ STATUS       :: Designing intelligent operating systems for enterprise & fintech
 
 <table width="100%">
 <tr>
-<td width="50%" stroke="#18C7B5">
+<td width="50%">
 
 ### 01. AI Strategy & Transformation
 * **Focus**: Readiness assessments, strategy roadmaps, executive alignment, and priority use-case triage.
