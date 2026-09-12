@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="log-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040706"/>
+      <stop offset="50%" stop-color="#0A0E0D"/>
+      <stop offset="100%" stop-color="#141B19"/>
+    </linearGradient>
+
+    <!-- DYNAMIC AMBIENT LIGHT SHIFT -->
+    <radialGradient id="dynamic-log-light" cx="30%" cy="40%" r="65%">
+      <animate attributeName="cx" values="30%; 70%; 40%; 30%" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="40%; 70%; 30%; 40%" dur="15s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#F26A2E" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0A0E0D" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="log-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#18C7B5" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+
+    <linearGradient id="log-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#18C7B5" stop-opacity="0.75"/>
+      <stop offset="70%" stop-color="#F26A2E" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#18C7B5" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glow-ember" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .log-hdr { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #18C7B5; letter-spacing: 2.5px; }
+    .log-plus { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #18C7B5; font-weight: 700; }
+    .log-key { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #18C7B5; font-weight: 700; letter-spacing: 1px; }
+    .log-key-ember { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #F26A2E; font-weight: 700; letter-spacing: 1px; }
+    .log-val { font-family: 'Inter', sans-serif; font-size: 13px; fill: #F3F0E7; font-weight: 500; letter-spacing: 0.2px; }
+  </style>
+
+  <!-- Panel Base -->
+  <rect width="1000" height="350" rx="8" fill="url(#log-bg)"/>
+  <rect width="1000" height="350" rx="8" fill="url(#dynamic-log-light)"/>
+  <rect width="1000" height="350" rx="8" fill="url(#log-grid)"/>
+  <rect x="1" y="1" width="998" height="348" rx="7" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- MOVING TELEMETRY RAYS -->
+  <g stroke-linecap="round">
+    <line x1="160" y1="0" x2="160" y2="350" stroke="#8A9691" stroke-opacity="0.08" stroke-dasharray="4 8">
+      <animate attributeName="stroke-dashoffset" values="0; -100" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="780" y1="0" x2="780" y2="350" stroke="#18C7B5" stroke-opacity="0.12" stroke-dasharray="6 12">
+      <animate attributeName="stroke-dashoffset" values="0; 120" dur="6s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Sentient Background Wave Morphing -->
+  <path fill="none" stroke="url(#log-wave-grad)" stroke-width="2.5" filter="url(#glow-soft)">
+    <animate attributeName="d"
+             dur="8s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+             values="
+               M -50 240 C 200 140, 450 300, 650 170 C 820 80, 920 260, 1050 180;
+               M -50 150 C 220 280, 380 100, 650 240 C 800 160, 950 90, 1050 240;
+               M -50 210 C 180 80, 420 260, 650 130 C 850 270, 900 130, 1050 170;
+               M -50 240 C 200 140, 450 300, 650 170 C 820 80, 920 260, 1050 180
+             "/>
+  </path>
+
+  <!-- Top Terminal Header Bar -->
+  <path d="M 1 8 Q 1 1 8 1 L 992 1 Q 999 1 999 8 L 999 38 L 1 38 Z" fill="#060908" stroke="#18C7B5" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="1" y1="38" x2="999" y2="38" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Controls -->
+  <circle cx="24" cy="19" r="4.5" fill="#F26A2E" opacity="0.8"/>
+  <circle cx="38" cy="19" r="4.5" fill="#8A9691" opacity="0.4"/>
+  <circle cx="52" cy="19" r="4.5" fill="#18C7B5" opacity="0.6"/>
+
+  <text x="74" y="23" class="log-hdr">06 // BUILD LOG &amp; SYSTEM TELEMETRY [ACTIVE_STREAM]</text>
+  <text x="976" y="23" class="log-hdr" text-anchor="end" fill="#8A9691" opacity="0.6">REALTIME_LOGS // POLLING</text>
+
+  <!-- 4 TELEMETRY BUILD LOG ENTRIES -->
+  <g transform="translate(24, 52)">
+
+    <!-- ENTRY 1: MISSION -->
+    <g transform="translate(0, 0)">
+      <rect width="952" height="62" rx="6" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="62" stroke="#18C7B5" stroke-width="3" filter="url(#glow-soft)"/>
+      
+      <circle cx="24" cy="31" r="3" fill="#18C7B5">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+      <text x="36" y="36" class="log-plus">+</text>
+      <text x="50" y="36" class="log-key">[MISSION]</text>
+      <text x="210" y="36" class="log-val">Designing AI-native operating systems for enterprise decision-making</text>
+    </g>
+
+    <!-- ENTRY 2: BUILDING -->
+    <g transform="translate(0, 70)">
+      <rect width="952" height="62" rx="6" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="62" stroke="#18C7B5" stroke-width="3" filter="url(#glow-soft)"/>
+      
+      <circle cx="24" cy="31" r="3" fill="#18C7B5">
+        <animate attributeName="opacity" dur="2.2s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+      <text x="36" y="36" class="log-plus">+</text>
+      <text x="50" y="36" class="log-key">[BUILDING]</text>
+      <text x="210" y="36" class="log-val">Agentic AI systems, decision engines &amp; enterprise AI infrastructure</text>
+    </g>
+
+    <!-- ENTRY 3: INTELLIGENCE -->
+    <g transform="translate(0, 140)">
+      <rect width="952" height="62" rx="6" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="62" stroke="#18C7B5" stroke-width="3" filter="url(#glow-soft)"/>
+      
+      <circle cx="24" cy="31" r="3" fill="#18C7B5">
+        <animate attributeName="opacity" dur="1.8s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+      <text x="36" y="36" class="log-plus">+</text>
+      <text x="50" y="36" class="log-key">[INTELLIGENCE]</text>
+      <text x="210" y="36" class="log-val">Commercial Intelligence across markets, strategy &amp; geopolitics</text>
+    </g>
+
+    <!-- ENTRY 4: SECURITY (Ember Security Highlight) -->
+    <g transform="translate(0, 210)">
+      <rect width="952" height="62" rx="6" fill="#080C0B" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
+      <line x1="0" y1="0" x2="5" y2="62" stroke="#F26A2E" stroke-width="3" filter="url(#glow-ember)"/>
+      
+      <circle cx="24" cy="31" r="3.5" fill="#F26A2E">
+        <animate attributeName="opacity" dur="2.4s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+      </circle>
+      <text x="36" y="36" class="log-plus" fill="#F26A2E">+</text>
+      <text x="50" y="36" class="log-key-ember">[SECURITY]</text>
+      <text x="210" y="36" class="log-val">Agent identity, permissions, tool boundaries, runtime controls &amp; AI governance</text>
+    </g>
+
+  </g>
+
+  <!-- Corner Brackets -->
+  <path d="M 1 20 L 1 1 L 20 1" stroke="#18C7B5" stroke-opacity="0.5" stroke-width="1.5" fill="none"/>
+  <path d="M 980 349 L 999 349 L 999 330" stroke="#18C7B5" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+</svg>

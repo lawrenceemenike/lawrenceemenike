@@ -75,7 +75,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 
 <p align="center">
   <a href="https://medium.com/@lawrence-emenike/audit-trails-and-explainability-for-compliance-building-the-transparency-layer-financial-services-d24961bad987" target="_blank">
-    <img src="./assets/signal-04-card.svg?v=10" alt="SIGNAL 004: Audit Trails & Explainability" width="100%" />
+    <img src="./assets/signal-04-card.svg?v=12" alt="SIGNAL 004: Audit Trails & Explainability" width="100%" />
   </a>
 </p>
 
@@ -97,12 +97,9 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 
 ## 06 / BUILD LOG // NOW EXPLORING
 
-```diff
-+ [CURRENT_FOCUS]  Designing enterprise agent permission boundaries & tool sandbox specs
-+ [RESEARCH_AXIS]   Token unit economics & inference cost optimization for Commercial Intelligence
-+ [FRAMEWORK]       AI-Native Operating Layer Framework v2.6
-+ [GEOGRAPHY]       Decision Intelligence and AI infrastructure for Global & African enterprises
-```
+<p align="center">
+  <img src="./assets/nelc-build-log-card.svg" alt="NELC Build Log & System Telemetry" width="100%" />
+</p>
 
 ---
 
