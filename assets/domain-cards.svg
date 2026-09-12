@@ -1,16 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="100%" height="100%">
   <defs>
     <linearGradient id="dom-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A0E0D"/>
+      <stop offset="0%" stop-color="#060908"/>
+      <stop offset="50%" stop-color="#0A0E0D"/>
       <stop offset="100%" stop-color="#141B19"/>
     </linearGradient>
+
     <pattern id="dom-grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#18C7B5" stroke-opacity="0.04" stroke-width="1"/>
     </pattern>
+
     <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
+
     <filter id="glow-ember" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
@@ -19,77 +23,105 @@
 
   <style>
     .dom-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #18C7B5; letter-spacing: 2px; }
-    .dom-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 16px; fill: #F3F0E7; letter-spacing: 0.5px; }
+    .dom-num-ember { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #F26A2E; letter-spacing: 2px; }
+    .dom-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; fill: #F3F0E7; letter-spacing: 0.3px; }
     .dom-desc { font-family: 'Inter', sans-serif; font-size: 12px; fill: #8A9691; line-height: 1.5; }
     .dom-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #18C7B5; opacity: 0.85; }
     .dom-tag-ember { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #F26A2E; opacity: 0.9; }
   </style>
 
-  <!-- CARD 1: AI STRATEGY (Top-Left) -->
+  <!-- Base Grid Layout (5 Operating Domains) -->
+
+  <!-- ROW 1: CARDS 1, 2, 3 -->
+
+  <!-- CARD 01: AI Strategy & Transformation -->
   <g transform="translate(0, 0)">
-    <rect width="435" height="165" rx="6" fill="url(#dom-bg)"/>
-    <rect width="435" height="165" rx="6" fill="url(#dom-grid)"/>
-    <rect x="1" y="1" width="433" height="163" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
+    <rect width="318" height="195" rx="6" fill="url(#dom-bg)"/>
+    <rect width="318" height="195" rx="6" fill="url(#dom-grid)"/>
+    <rect x="1" y="1" width="316" height="193" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
     
-    <text x="24" y="32" class="dom-num">DOMAIN // 01</text>
-    <circle cx="400" cy="28" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    <text x="20" y="30" class="dom-num">DOMAIN // 01</text>
+    <circle cx="295" cy="26" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
     
-    <text x="24" y="58" class="dom-title">AI Strategy &amp; Transformation</text>
-    <text x="24" y="82" class="dom-desc">Organizational AI readiness assessments, multi-year strategic</text>
-    <text x="24" y="98" class="dom-desc">roadmaps, executive alignment &amp; enterprise value realization.</text>
+    <text x="20" y="56" class="dom-title">AI Strategy &amp; Transformation</text>
+    <text x="20" y="80" class="dom-desc">Organizational readiness diagnostic,</text>
+    <text x="20" y="96" class="dom-desc">multi-year strategic roadmaps, use-case</text>
+    <text x="20" y="112" class="dom-desc">triage &amp; executive C-suite alignment.</text>
     
-    <line x1="24" y1="120" x2="411" y2="120" stroke="#8A9691" stroke-opacity="0.15"/>
-    <text x="24" y="140" class="dom-tag">[ ROADMAPS · READINESS · USE-CASE TRIAGE ]</text>
+    <line x1="20" y1="145" x2="298" y2="145" stroke="#8A9691" stroke-opacity="0.15"/>
+    <text x="20" y="168" class="dom-tag">[ ROADMAPS · READINESS · TRIAGE ]</text>
   </g>
 
-  <!-- CARD 2: AI GOVERNANCE (Top-Right) -->
-  <g transform="translate(465, 0)">
-    <rect width="435" height="165" rx="6" fill="url(#dom-bg)"/>
-    <rect width="435" height="165" rx="6" fill="url(#dom-grid)"/>
-    <rect x="1" y="1" width="433" height="163" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- CARD 02: AI-Native Operating Models -->
+  <g transform="translate(341, 0)">
+    <rect width="318" height="195" rx="6" fill="url(#dom-bg)"/>
+    <rect width="318" height="195" rx="6" fill="url(#dom-grid)"/>
+    <rect x="1" y="1" width="316" height="193" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
     
-    <text x="24" y="32" class="dom-num">DOMAIN // 02</text>
-    <circle cx="400" cy="28" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    <text x="20" y="30" class="dom-num">DOMAIN // 02</text>
+    <circle cx="295" cy="26" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
     
-    <text x="24" y="58" class="dom-title">Responsible AI &amp; Governance</text>
-    <text x="24" y="82" class="dom-desc">Governance control frameworks, risk classification, oversight</text>
-    <text x="24" y="98" class="dom-desc">models, human accountability, and compliance alignment.</text>
+    <text x="20" y="56" class="dom-title">AI-Native Operating Models</text>
+    <text x="20" y="80" class="dom-desc">Redesigning enterprise architecture,</text>
+    <text x="20" y="96" class="dom-desc">intelligent automated workflows &amp; human-</text>
+    <text x="20" y="112" class="dom-desc">in-the-loop operational integration.</text>
     
-    <line x1="24" y1="120" x2="411" y2="120" stroke="#8A9691" stroke-opacity="0.15"/>
-    <text x="24" y="140" class="dom-tag">[ RISK CONTROLS · POLICY · COMPLIANCE ]</text>
+    <line x1="20" y1="145" x2="298" y2="145" stroke="#8A9691" stroke-opacity="0.15"/>
+    <text x="20" y="168" class="dom-tag">[ OPERATING LAYER · WORKFLOWS ]</text>
   </g>
 
-  <!-- CARD 3: AI SECURITY (Bottom-Left) -->
-  <g transform="translate(0, 195)">
-    <rect width="435" height="165" rx="6" fill="url(#dom-bg)"/>
-    <rect width="435" height="165" rx="6" fill="url(#dom-grid)"/>
-    <rect x="1" y="1" width="433" height="163" rx="5" fill="none" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- CARD 03: Agentic AI Strategy & Architecture -->
+  <g transform="translate(682, 0)">
+    <rect width="318" height="195" rx="6" fill="url(#dom-bg)"/>
+    <rect width="318" height="195" rx="6" fill="url(#dom-grid)"/>
+    <rect x="1" y="1" width="316" height="193" rx="5" fill="none" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
     
-    <text x="24" y="32" class="dom-num" fill="#F26A2E">DOMAIN // 03 [CRITICAL]</text>
-    <circle cx="400" cy="28" r="3.5" fill="#F26A2E" filter="url(#glow-ember)"/>
+    <text x="20" y="30" class="dom-num-ember">DOMAIN // 03 [AGENTIC]</text>
+    <circle cx="295" cy="26" r="3.5" fill="#F26A2E" filter="url(#glow-ember)"/>
     
-    <text x="24" y="58" class="dom-title">Agentic AI Risk &amp; Security</text>
-    <text x="24" y="82" class="dom-desc">Practical security research into prompt injection defenses,</text>
-    <text x="24" y="98" class="dom-desc">agentic permission boundaries, trust layers &amp; safe execution.</text>
+    <text x="20" y="56" class="dom-title">Agentic AI Implementation</text>
+    <text x="20" y="80" class="dom-desc">Multi-agent system architecture,</text>
+    <text x="20" y="96" class="dom-desc">autonomous tool execution, orchestration</text>
+    <text x="20" y="112" class="dom-desc">engines &amp; production deployment.</text>
     
-    <line x1="24" y1="120" x2="411" y2="120" stroke="#F26A2E" stroke-opacity="0.2"/>
-    <text x="24" y="140" class="dom-tag-ember">[ PROMPT DEFENSE · AGENT TRUST BOUNDARIES ]</text>
+    <line x1="20" y1="145" x2="298" y2="145" stroke="#F26A2E" stroke-opacity="0.2"/>
+    <text x="20" y="168" class="dom-tag-ember">[ AGENTIC AGENTS · ORCHESTRATION ]</text>
   </g>
 
-  <!-- CARD 4: FINAI & INTELLIGENCE (Bottom-Right) -->
-  <g transform="translate(465, 195)">
-    <rect width="435" height="165" rx="6" fill="url(#dom-bg)"/>
-    <rect width="435" height="165" rx="6" fill="url(#dom-grid)"/>
-    <rect x="1" y="1" width="433" height="163" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- ROW 2: CARDS 4, 5 -->
+
+  <!-- CARD 04: AI Governance, Security & Resilience -->
+  <g transform="translate(0, 220)">
+    <rect width="490" height="215" rx="6" fill="url(#dom-bg)"/>
+    <rect width="490" height="215" rx="6" fill="url(#dom-grid)"/>
+    <rect x="1" y="1" width="488" height="213" rx="5" fill="none" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
     
-    <text x="24" y="32" class="dom-num">DOMAIN // 04</text>
-    <circle cx="400" cy="28" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    <text x="24" y="32" class="dom-num-ember">DOMAIN // 04 [GOVERNANCE &amp; RESILIENCE]</text>
+    <circle cx="465" cy="28" r="3.5" fill="#F26A2E" filter="url(#glow-ember)"/>
     
-    <text x="24" y="58" class="dom-title">FinAI &amp; Decision Intelligence</text>
-    <text x="24" y="82" class="dom-desc">Financial modeling for AI investment, token economics, FinOps,</text>
-    <text x="24" y="98" class="dom-desc">commercial decision engines, and economic value measurement.</text>
+    <text x="24" y="60" class="dom-title">AI Governance, Security &amp; Resilience</text>
+    <text x="24" y="86" class="dom-desc">Audit-ready governance frameworks, risk classification, responsible AI</text>
+    <text x="24" y="104" class="dom-desc">oversight models, prompt injection defenses &amp; agent trust boundaries.</text>
     
-    <line x1="24" y1="120" x2="411" y2="120" stroke="#8A9691" stroke-opacity="0.15"/>
-    <text x="24" y="140" class="dom-tag">[ FINOPS · AI ECONOMICS · DECISION SUPPORT ]</text>
+    <line x1="24" y1="145" x2="466" y2="145" stroke="#F26A2E" stroke-opacity="0.2"/>
+    <text x="24" y="175" class="dom-tag-ember">[ RESPONSIBLE AI · PROMPT SECURITY · AGENT TRUST BOUNDARIES ]</text>
   </g>
+
+  <!-- CARD 05: Commercial Intelligence & Decision Systems -->
+  <g transform="translate(510, 220)">
+    <rect width="490" height="215" rx="6" fill="url(#dom-bg)"/>
+    <rect width="490" height="215" rx="6" fill="url(#dom-grid)"/>
+    <rect x="1" y="1" width="488" height="213" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+    
+    <text x="24" y="32" class="dom-num">DOMAIN // 05 [DECISION INTELLIGENCE]</text>
+    <circle cx="465" cy="28" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    
+    <text x="24" y="60" class="dom-title">Commercial Intelligence &amp; AI Decision Systems</text>
+    <text x="24" y="86" class="dom-desc">Financial modeling for AI investment, token unit economics, FinOps,</text>
+    <text x="24" y="104" class="dom-desc">automated commercial decision support &amp; economic return measurement.</text>
+    
+    <line x1="24" y1="145" x2="466" y2="145" stroke="#8A9691" stroke-opacity="0.15"/>
+    <text x="24" y="175" class="dom-tag">[ FINOPS · TOKEN ECONOMICS · DECISION ENGINES ]</text>
+  </g>
+
 </svg>

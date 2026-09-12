@@ -6,7 +6,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 -->
 
 <p align="center">
-  <img src="./assets/nelc-signal-hero.svg?v=3" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
+  <img src="./assets/nelc-signal-hero.svg?v=4" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ---
 
 <p align="center">
-  <img src="./assets/positioning-card.svg?v=3" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+  <img src="./assets/positioning-card.svg?v=4" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
 </p>
 
 ---
@@ -28,32 +28,15 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 01 / SYSTEM MANIFEST
 
 <p align="center">
-  <img src="./assets/manifest-card.svg?v=3" alt="System Manifest Card" width="100%" />
+  <img src="./assets/manifest-card.svg?v=4" alt="System Manifest Card" width="100%" />
 </p>
-
-```gcode
-SYS_MANIFEST // ID: NELC_DIGITAL_01
---------------------------------------------------------------------------------
-IDENTITY     :: AI Transformation Consultant & Agentic AI Engineer
-STUDIO       :: Nelc Digital (Founder)
-LOCATION     :: Lagos, Nigeria [6.5244° N, 3.3792° E] — Serving Global Markets
-MISSION      :: Governed AI. Secure adoption. Measurable commercial value.
-
-FOCUS        :: [01] AI Strategy & Enterprise Roadmaps
-             :: [02] Responsible AI & Governance Control Models
-             :: [03] Agentic AI Risk & Security Engineering
-             :: [04] FinAI, FinOps & Commercial Decision Intelligence
-
-STATUS       :: Designing intelligent operating systems for enterprise & fintechs
---------------------------------------------------------------------------------
-```
 
 ---
 
 ## 02 / OPERATING DOMAINS
 
 <p align="center">
-  <img src="./assets/domain-cards.svg?v=3" alt="NELC Operating Domains" width="100%" />
+  <img src="./assets/domain-cards.svg?v=4" alt="NELC Operating Domains" width="100%" />
 </p>
 
 <table width="100%">
@@ -63,33 +46,43 @@ STATUS       :: Designing intelligent operating systems for enterprise & fintech
 ### 01. AI Strategy & Transformation
 * **Focus**: Readiness assessments, strategy roadmaps, executive alignment, and priority use-case triage.
 * **Impact**: Transitioning enterprises from isolated AI experiments to systematic, value-accretive operating models.
-* **Deliverables**: AI Maturity Frameworks, Implementation Roadmaps, C-Suite Decision Briefings.
+* **Deliverables**: AI Maturity Frameworks, Transformation Roadmaps, C-Suite Decision Briefings.
 
 </td>
 <td width="50%">
 
-### 02. Responsible AI & Governance
-* **Focus**: Governance control frameworks, risk classification, oversight models, and human accountability.
-* **Impact**: Ensuring regulatory compliance, ethical guardrails, and auditability for financial and regulated institutions.
-* **Deliverables**: Policy Engine Specs, Model Risk Registries, Compliance Audits.
+### 02. AI-Native Operating Models & Workflows
+* **Focus**: Enterprise workflow redesign, intelligent automation, human-in-the-loop operational integration.
+* **Impact**: Re-engineering core operational processes around real-time intelligence engines.
+* **Deliverables**: Operating Layer Blueprints, Workflow Specs, Integration Specs.
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 03. Agentic AI Risk & Security
-* **Focus**: Defensive security for autonomous agent workflows, prompt-injection countermeasures, and permission boundaries.
-* **Impact**: Protecting enterprise data, credentials, and downstream execution layers from emerging agentic attack vectors.
-* **Deliverables**: Agent Trust Boundary Specs, Threat Matrix Models, Injection Test Harnesses.
+### 03. Agentic AI Strategy & Architecture
+* **Focus**: Multi-agent system design, autonomous tool execution, orchestration engines, production deployment.
+* **Impact**: Deploying trustworthy autonomous agent fleets with resilient state management and permission boundaries.
+* **Deliverables**: Agent Architecture Specs, Tool-Call Harnesses, Orchestration Engines.
 
 </td>
 <td width="50%">
 
-### 04. FinAI & Decision Intelligence
-* **Focus**: Financial modeling for AI investment, token economics, FinOps, and automated commercial decision engines.
-* **Impact**: Aligning raw model performance with unit economics, margin impact, and financial return on investment.
-* **Deliverables**: FinAI Cost Models, Token Unit Economics Calculators, Decision Dashboards.
+### 04. AI Governance, Security & Resilience
+* **Focus**: Governance control frameworks, risk classification, prompt injection defenses, agent trust boundaries.
+* **Impact**: Ensuring regulatory compliance, auditability, and protection against emerging agentic attack vectors.
+* **Deliverables**: Model Risk Registries, Threat Matrix Models, Injection Countermeasures.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" width="100%">
+
+### 05. Commercial Intelligence & AI-Powered Decision Systems
+* **Focus**: Financial modeling for AI investment, token unit economics, FinOps, automated commercial decision engines.
+* **Impact**: Aligning raw model capabilities with financial return, cost predictability, and unit margin growth.
+* **Deliverables**: FinOps Cost Engines, Token Economics Calculators, Commercial Decision Dashboards.
 
 </td>
 </tr>
@@ -128,8 +121,8 @@ Enterprise-ready architecture patterns, governance frameworks, and technical spe
 
 Curated writing, architectural frameworks, and research papers on AI implementation, governance, and economics:
 
-- **`SIGNAL_001`** — [**AI Governance Frameworks for Financial Institutions**](https://nelc.digital/writing/governance-fintech)  
-  *Designing audit-ready oversight layers, model risk controls, and regulatory compliance for African and international banks.*
+- **`SIGNAL_001`** — [**AI Governance Frameworks for Regulated Enterprises**](https://nelc.digital/writing/governance-enterprise)  
+  *Designing audit-ready oversight layers, model risk controls, and compliance for global institutions.*
 
 - **`SIGNAL_002`** — [**The Economics of Enterprise AI Adoption**](https://nelc.digital/writing/ai-economics)  
   *Moving beyond model performance metrics to token unit economics, infra cost modeling, and commercial ROI.*
@@ -145,7 +138,7 @@ Curated writing, architectural frameworks, and research papers on AI implementat
 ## 05 / SIGNATURE SIGNAL FIELD
 
 <p align="center">
-  <img src="./assets/signal-field.svg?v=3" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
+  <img src="./assets/signal-field.svg?v=4" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
 </p>
 
 ---
@@ -154,16 +147,16 @@ Curated writing, architectural frameworks, and research papers on AI implementat
 
 ```diff
 + [CURRENT_FOCUS]  Designing enterprise agent permission boundaries & tool sandbox specs
-+ [RESEARCH_AXIS]   Token unit economics & inference cost optimization for FinAI
-+ [FRAMEWORK]       AI Readiness & Transformation Framework v2.4
-+ [GEOGRAPHY]       Decision Intelligence and AI infrastructure for West African enterprises
++ [RESEARCH_AXIS]   Token unit economics & inference cost optimization for Commercial Intelligence
++ [FRAMEWORK]       AI-Native Operating Layer Framework v2.6
++ [GEOGRAPHY]       Decision Intelligence and AI infrastructure for Global & African enterprises
 ```
 
 ---
 
 ## 07 / CONNECT & DISCOVERY
 
-Whether you are an enterprise executive planning an AI transformation roadmap, a bank/fintech navigating AI governance & security, or a partner seeking specialized technical advisory:
+Whether you are an enterprise executive planning an AI transformation roadmap, an organization navigating AI governance & security, or a partner seeking specialized technical advisory:
 
 <div align="center">
 

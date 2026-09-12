@@ -1,98 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 310" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
   <defs>
-    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A0E0D"/>
+    <linearGradient id="man-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050807"/>
+      <stop offset="50%" stop-color="#0A0E0D"/>
       <stop offset="100%" stop-color="#141B19"/>
     </linearGradient>
-    <pattern id="card-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#18C7B5" stroke-opacity="0.04" stroke-width="1"/>
+
+    <pattern id="man-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#18C7B5" stroke-opacity="0.04" stroke-width="1"/>
     </pattern>
-    <filter id="teal-glow" x="-20%" y="-20%" width="140%" height="140%">
+
+    <linearGradient id="man-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#18C7B5" stop-opacity="0.6"/>
+      <stop offset="75%" stop-color="#F26A2E" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#18C7B5" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
   <style>
-    .code-key { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #8A9691; font-weight: 500; }
-    .code-val { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #F3F0E7; font-weight: 400; }
-    .code-val-teal { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #18C7B5; font-weight: 600; }
-    .code-val-ember { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #F26A2E; font-weight: 500; }
-    .card-title { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #18C7B5; letter-spacing: 2px; text-transform: uppercase; }
+    .code-key { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #8A9691; font-weight: 500; letter-spacing: 1px; }
+    .code-val { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #F3F0E7; font-weight: 400; }
+    .code-val-teal { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #18C7B5; font-weight: 600; }
+    .code-val-ember { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #F26A2E; font-weight: 500; }
+    .card-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #18C7B5; letter-spacing: 2.5px; text-transform: uppercase; }
   </style>
 
-  <!-- Card Background -->
-  <rect width="900" height="310" rx="8" fill="url(#card-bg)"/>
-  <rect width="900" height="310" rx="8" fill="url(#card-grid)"/>
-  <rect x="1" y="1" width="898" height="308" rx="7" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- Panel Base -->
+  <rect width="1000" height="350" rx="8" fill="url(#man-bg)"/>
+  <rect width="1000" height="350" rx="8" fill="url(#man-grid)"/>
+  <rect x="1" y="1" width="998" height="348" rx="7" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Sentient Background Wave Morphing -->
+  <path fill="none" stroke="url(#man-wave-grad)" stroke-width="2" filter="url(#glow-soft)">
+    <animate attributeName="d"
+             dur="8s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+             values="
+               M -50 250 C 200 160, 450 310, 650 180 C 820 90, 920 270, 1050 200;
+               M -50 160 C 220 300, 380 110, 650 260 C 800 170, 950 100, 1050 260;
+               M -50 220 C 180 90, 420 270, 650 140 C 850 280, 900 140, 1050 180;
+               M -50 250 C 200 160, 450 310, 650 180 C 820 90, 920 270, 1050 200
+             "/>
+  </path>
 
   <!-- Top Terminal Header Bar -->
-  <path d="M 1 8 Q 1 1 8 1 L 892 1 Q 899 1 899 8 L 899 38 L 1 38 Z" fill="#080C0B" stroke="#18C7B5" stroke-opacity="0.15" stroke-width="1"/>
-  <line x1="1" y1="38" x2="899" y2="38" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
+  <path d="M 1 8 Q 1 1 8 1 L 992 1 Q 999 1 999 8 L 999 38 L 1 38 Z" fill="#060908" stroke="#18C7B5" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="1" y1="38" x2="999" y2="38" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
 
-  <!-- Controls -->
-  <circle cx="22" cy="19" r="4.5" fill="#F26A2E" opacity="0.8"/>
-  <circle cx="36" cy="19" r="4.5" fill="#8A9691" opacity="0.4"/>
-  <circle cx="50" cy="19" r="4.5" fill="#18C7B5" opacity="0.6"/>
+  <!-- Window Controls -->
+  <circle cx="24" cy="19" r="4.5" fill="#F26A2E" opacity="0.8"/>
+  <circle cx="38" cy="19" r="4.5" fill="#8A9691" opacity="0.4"/>
+  <circle cx="52" cy="19" r="4.5" fill="#18C7B5" opacity="0.6"/>
 
-  <text x="70" y="23" class="card-title">/MANIFEST // SYSTEM_IDENTITY_V2.6</text>
-  <text x="870" y="23" class="card-title" text-anchor="end" fill="#8A9691" opacity="0.6">OPERATIONAL</text>
+  <text x="74" y="23" class="card-title">SYS_MANIFEST // ID: NELC_DIGITAL_01</text>
+  <text x="976" y="23" class="card-title" text-anchor="end" fill="#8A9691" opacity="0.6">OPERATIONAL_LAYER</text>
 
-  <!-- Content Grid -->
-  <g transform="translate(30, 65)">
-    <!-- Column 1 -->
-    <g transform="translate(0, 0)">
-      <!-- Line 1: Identity -->
-      <text x="0" y="20" class="code-key">identity</text>
-      <text x="120" y="20" class="code-val-teal">AI Transformation Consultant &amp; Agentic AI Engineer</text>
+  <!-- Manifest Content Fields -->
+  <g transform="translate(28, 62)">
+    
+    <!-- Row 1: Identity -->
+    <text x="0" y="20" class="code-key">IDENTITY</text>
+    <text x="130" y="20" class="code-val-teal">AI Transformation Consultant &amp; Agentic AI Engineer</text>
 
-      <!-- Line 2: Studio -->
-      <text x="0" y="50" class="code-key">studio</text>
-      <text x="120" y="50" class="code-val">Nelc Digital <tspan fill="#8A9691">(Founder)</tspan></text>
+    <!-- Row 2: Studio -->
+    <text x="0" y="46" class="code-key">STUDIO</text>
+    <text x="130" y="46" class="code-val">Nelc Digital <tspan fill="#8A9691">(Founder)</tspan></text>
 
-      <!-- Line 3: Location -->
-      <text x="0" y="80" class="code-key">location</text>
-      <text x="120" y="80" class="code-val">Lagos, Nigeria <tspan fill="#18C7B5" font-size="11">[West Africa Hub]</tspan></text>
+    <!-- Row 3: Location -->
+    <text x="0" y="72" class="code-key">LOCATION</text>
+    <text x="130" y="72" class="code-val">Lagos, Nigeria <tspan fill="#18C7B5" font-size="11.5">[6.5244° N, 3.3792° E] — Serving Global Markets</tspan></text>
 
-      <!-- Line 4: Mission -->
-      <text x="0" y="110" class="code-key">mission</text>
-      <text x="120" y="110" class="code-val" fill="#F3F0E7">Governed AI. Secure adoption. Measurable commercial value.</text>
+    <!-- Row 4: Mission -->
+    <text x="0" y="98" class="code-key">MISSION</text>
+    <text x="130" y="98" class="code-val" fill="#F3F0E7">Governed AI. Secure adoption. Measurable commercial value.</text>
 
-      <!-- Divider -->
-      <line x1="0" y1="130" x2="840" y2="130" stroke="#8A9691" stroke-opacity="0.15" stroke-dasharray="3 3"/>
-    </g>
+    <!-- Divider Line -->
+    <line x1="0" y1="116" x2="944" y2="116" stroke="#8A9691" stroke-opacity="0.18" stroke-dasharray="3 3"/>
 
-    <!-- Focus Areas & Status -->
-    <g transform="translate(0, 150)">
-      <text x="0" y="20" class="code-key">core_focus</text>
+    <!-- Row 5: Focus Areas -->
+    <g transform="translate(0, 134)">
+      <text x="0" y="20" class="code-key">FOCUS</text>
       
-      <!-- Bullet grid -->
-      <g transform="translate(120, 20)">
-        <!-- Col 1 -->
-        <circle cx="0" cy="-4" r="2.5" fill="#18C7B5"/>
-        <text x="12" y="0" class="code-val">AI Strategy &amp; Enterprise Roadmaps</text>
+      <g transform="translate(130, 0)">
+        <text x="0" y="20" class="code-val"><tspan fill="#18C7B5">[01]</tspan> AI Strategy &amp; Transformation</text>
+        <text x="0" y="42" class="code-val"><tspan fill="#18C7B5">[02]</tspan> AI-Native Operating Models &amp; Intelligent Workflows</text>
+        <text x="0" y="64" class="code-val"><tspan fill="#18C7B5">[03]</tspan> Agentic AI Strategy, Architecture &amp; Implementation</text>
         
-        <circle cx="0" cy="26" r="2.5" fill="#18C7B5"/>
-        <text x="12" y="30" class="code-val">Agentic AI Risk &amp; Security</text>
-
-        <!-- Col 2 -->
-        <circle cx="340" cy="-4" r="2.5" fill="#F26A2E"/>
-        <text x="352" y="0" class="code-val">Responsible AI &amp; Governance</text>
-        
-        <circle cx="340" cy="26" r="2.5" fill="#18C7B5"/>
-        <text x="352" y="30" class="code-val">FinAI &amp; Commercial Intelligence</text>
+        <text x="480" y="20" class="code-val"><tspan fill="#F26A2E">[04]</tspan> AI Governance, Security &amp; Resilience</text>
+        <text x="480" y="42" class="code-val"><tspan fill="#18C7B5">[05]</tspan> Commercial Intelligence &amp; AI Decision Systems</text>
       </g>
-
-      <!-- Status Row -->
-      <text x="0" y="78" class="code-key">sys_status</text>
-      <text x="120" y="78" class="code-val-ember">Designing intelligent operating systems for enterprise &amp; fintechs</text>
-      
-      <circle cx="680" cy="74" r="4" fill="#18C7B5" filter="url(#teal-glow)"/>
-      <text x="692" y="78" class="code-key" fill="#18C7B5" font-size="11">ACTIVE_POLL</text>
     </g>
+
+    <!-- Divider Line -->
+    <line x1="0" y1="222" x2="944" y2="222" stroke="#8A9691" stroke-opacity="0.18" stroke-dasharray="3 3"/>
+
+    <!-- Row 6: Status -->
+    <g transform="translate(0, 238)">
+      <text x="0" y="20" class="code-key">STATUS</text>
+      <text x="130" y="20" class="code-val-ember">Designing governed AI operating layers for modern enterprises &amp; global institutions</text>
+      
+      <circle cx="936" cy="16" r="4" fill="#18C7B5" filter="url(#glow-soft)">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.3; 1; 0.3" />
+      </circle>
+    </g>
+
   </g>
 
-  <!-- Corner Brackets -->
+  <!-- Corner Frame Brackets -->
   <path d="M 1 20 L 1 1 L 20 1" stroke="#18C7B5" stroke-opacity="0.5" stroke-width="1.5" fill="none"/>
-  <path d="M 880 309 L 899 309 L 899 290" stroke="#18C7B5" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+  <path d="M 980 349 L 999 349 L 999 330" stroke="#18C7B5" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
 </svg>
