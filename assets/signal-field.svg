@@ -1,17 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
   <defs>
     <linearGradient id="sf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060908"/>
+      <stop offset="0%" stop-color="#040706"/>
       <stop offset="40%" stop-color="#0A0E0D"/>
       <stop offset="100%" stop-color="#141B19"/>
     </linearGradient>
 
+    <!-- DYNAMIC AMBIENT LIGHT SHIFT -->
+    <radialGradient id="sf-light-shift" cx="40%" cy="50%" r="60%">
+      <animate attributeName="cx" values="40%; 70%; 30%; 40%" dur="16s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="50%; 30%; 70%; 50%" dur="16s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#F26A2E" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0A0E0D" stop-opacity="0"/>
+    </radialGradient>
+
     <!-- Signal Light Traces -->
     <linearGradient id="trace-main" x1="0%" y1="50%" x2="100%" y2="50%">
       <stop offset="0%" stop-color="#18C7B5" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#18C7B5" stop-opacity="0.85"/>
+      <stop offset="25%" stop-color="#18C7B5" stop-opacity="0.9"/>
       <stop offset="50%" stop-color="#0D8E86" stop-opacity="0.95"/>
-      <stop offset="75%" stop-color="#F26A2E" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#F26A2E" stop-opacity="0.9"/>
       <stop offset="100%" stop-color="#18C7B5" stop-opacity="0"/>
     </linearGradient>
 
@@ -36,6 +45,11 @@
       <feGaussianBlur stdDeviation="7" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
+
+    <filter id="glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
   <style>
@@ -46,56 +60,99 @@
 
   <!-- Background -->
   <rect width="900" height="240" rx="8" fill="url(#sf-bg)"/>
+  <rect width="900" height="240" rx="8" fill="url(#sf-light-shift)"/>
   <rect width="900" height="240" rx="8" fill="url(#sf-grid)"/>
   <rect x="1" y="1" width="898" height="238" rx="7" fill="none" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
 
-  <!-- Network Vectors (Simulating night photography light trails / data contours) -->
+  <!-- MOVING TELEMETRY RAYS -->
   <g stroke-linecap="round">
-    <!-- Contour line 1 -->
-    <path d="M -50 160 C 150 160, 200 70, 380 70 C 560 70, 620 180, 850 180 C 890 180, 930 150, 950 140" fill="none" stroke="url(#trace-main)" stroke-width="2" filter="url(#glow-heavy)"/>
-    
-    <!-- Contour line 2 (Secondary Teal) -->
-    <path d="M -50 180 C 120 180, 220 90, 400 90 C 580 90, 600 160, 830 160" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 4"/>
-    
-    <!-- Fine Grid Rays -->
-    <line x1="180" y1="0" x2="180" y2="240" stroke="#8A9691" stroke-opacity="0.08" stroke-dasharray="2 2"/>
-    <line x1="380" y1="0" x2="380" y2="240" stroke="#18C7B5" stroke-opacity="0.12" stroke-dasharray="4 4"/>
-    <line x1="620" y1="0" x2="620" y2="240" stroke="#8A9691" stroke-opacity="0.08" stroke-dasharray="2 2"/>
-    <line x1="780" y1="0" x2="780" y2="240" stroke="#F26A2E" stroke-opacity="0.1" stroke-dasharray="2 4"/>
+    <line x1="180" y1="0" x2="180" y2="240" stroke="#8A9691" stroke-opacity="0.1" stroke-dasharray="4 8">
+      <animate attributeName="stroke-dashoffset" values="0; -100" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="380" y1="0" x2="380" y2="240" stroke="#18C7B5" stroke-opacity="0.15" stroke-dasharray="6 12">
+      <animate attributeName="stroke-dashoffset" values="0; 120" dur="6s" repeatCount="indefinite" />
+    </line>
+    <line x1="620" y1="0" x2="620" y2="240" stroke="#8A9691" stroke-opacity="0.1" stroke-dasharray="4 8">
+      <animate attributeName="stroke-dashoffset" values="0; -100" dur="9s" repeatCount="indefinite" />
+    </line>
+    <line x1="780" y1="0" x2="780" y2="240" stroke="#F26A2E" stroke-opacity="0.15" stroke-dasharray="4 10">
+      <animate attributeName="stroke-dashoffset" values="0; 140" dur="7s" repeatCount="indefinite" />
+    </line>
   </g>
 
-  <!-- Key Nodes: TRUST, VALUE, CONTROL, INTELLIGENCE -->
+  <!-- MORPHING SENTIENT DATA CONTOURS -->
+  <g stroke-linecap="round">
+    <!-- Contour line 1 (SMIL Morphing) -->
+    <path fill="none" stroke="url(#trace-main)" stroke-width="2.5" filter="url(#glow-heavy)">
+      <animate attributeName="d"
+               dur="8s"
+               repeatCount="indefinite"
+               calcMode="spline"
+               keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+               values="
+                 M -50 160 C 150 160, 200 70, 380 70 C 560 70, 620 180, 850 180 C 890 180, 930 150, 950 140;
+                 M -50 110 C 170 200, 240 50, 380 130 C 540 210, 650 90, 850 130 C 890 130, 930 180, 950 120;
+                 M -50 200 C 130 90, 220 180, 380 50 C 580 140, 600 220, 850 190 C 890 190, 930 110, 950 170;
+                 M -50 160 C 150 160, 200 70, 380 70 C 560 70, 620 180, 850 180 C 890 180, 930 150, 950 140
+               "/>
+    </path>
+    
+    <!-- Secondary Wave -->
+    <path fill="none" stroke="#18C7B5" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 4">
+      <animate attributeName="d"
+               dur="10s"
+               repeatCount="indefinite"
+               calcMode="spline"
+               keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+               values="
+                 M -50 180 C 120 180, 220 90, 400 90 C 580 90, 600 160, 830 160;
+                 M -50 130 C 150 80, 250 190, 400 140 C 550 60, 650 210, 830 100;
+                 M -50 210 C 100 230, 190 60, 400 70 C 600 180, 580 110, 830 190;
+                 M -50 180 C 120 180, 220 90, 400 90 C 580 90, 600 160, 830 160
+               "/>
+    </path>
+  </g>
+
+  <!-- Key Nodes: TRUST, VALUE, CONTROL, INTELLIGENCE with Floating Pulsing Animation -->
   
-  <!-- NODE 1: TRUST (x: 180, y: 125) -->
+  <!-- NODE 1: TRUST -->
   <g transform="translate(180, 125)">
-    <circle cx="0" cy="0" r="16" fill="url(#teal-pulse)"/>
+    <circle cx="0" cy="0" r="16" fill="url(#teal-pulse)">
+      <animate attributeName="r" dur="3s" repeatCount="indefinite" values="12; 20; 12" />
+    </circle>
     <circle cx="0" cy="0" r="3.5" fill="#18C7B5"/>
     <circle cx="0" cy="0" r="7" fill="none" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="1"/>
     <text x="14" y="-2" class="node-label">TRUST</text>
     <text x="14" y="10" class="node-sub">[GOVERNANCE]</text>
   </g>
 
-  <!-- NODE 2: CONTROL (x: 380, y: 70) -->
+  <!-- NODE 2: CONTROL -->
   <g transform="translate(380, 70)">
-    <circle cx="0" cy="0" r="22" fill="url(#ember-pulse)"/>
-    <circle cx="0" cy="0" r="4.5" fill="#F26A2E"/>
+    <circle cx="0" cy="0" r="22" fill="url(#ember-pulse)">
+      <animate attributeName="r" dur="3.5s" repeatCount="indefinite" values="16; 26; 16" />
+    </circle>
+    <circle cx="0" cy="0" r="4.5" fill="#F26A2E" filter="url(#glow-soft)"/>
     <circle cx="0" cy="0" r="9" fill="none" stroke="#F26A2E" stroke-opacity="0.8" stroke-width="1"/>
     <text x="16" y="-4" class="node-label" fill="#F3F0E7">CONTROL</text>
     <text x="16" y="9" class="node-sub-ember">[SECURITY LAYER]</text>
   </g>
 
-  <!-- NODE 3: VALUE (x: 620, y: 180) -->
+  <!-- NODE 3: VALUE -->
   <g transform="translate(620, 180)">
-    <circle cx="0" cy="0" r="16" fill="url(#teal-pulse)"/>
+    <circle cx="0" cy="0" r="16" fill="url(#teal-pulse)">
+      <animate attributeName="r" dur="2.8s" repeatCount="indefinite" values="12; 18; 12" />
+    </circle>
     <circle cx="0" cy="0" r="3.5" fill="#18C7B5"/>
     <circle cx="0" cy="0" r="7" fill="none" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="1"/>
     <text x="14" y="-2" class="node-label">VALUE</text>
     <text x="14" y="10" class="node-sub">[FINAI / ROI]</text>
   </g>
 
-  <!-- NODE 4: INTELLIGENCE (x: 780, y: 140) -->
+  <!-- NODE 4: INTELLIGENCE -->
   <g transform="translate(780, 140)">
-    <circle cx="0" cy="0" r="14" fill="url(#teal-pulse)"/>
+    <circle cx="0" cy="0" r="14" fill="url(#teal-pulse)">
+      <animate attributeName="r" dur="3.2s" repeatCount="indefinite" values="10; 16; 10" />
+    </circle>
     <circle cx="0" cy="0" r="3" fill="#18C7B5"/>
     <circle cx="0" cy="0" r="6" fill="none" stroke="#18C7B5" stroke-opacity="0.5" stroke-width="1"/>
     <text x="14" y="-2" class="node-label">INTELLIGENCE</text>
@@ -103,6 +160,6 @@
   </g>
 
   <!-- Signature Overlay Labels -->
-  <text x="24" y="218" class="node-sub" font-size="9" opacity="0.6">NELC DIGITAL // SIGNAL FIELD V2.4</text>
-  <text x="876" y="218" class="node-sub" font-size="9" text-anchor="end" opacity="0.6">COORDINATES // 6.5244° N, 3.3792° E</text>
+  <text x="24" y="218" class="node-sub" font-size="9" opacity="0.7">NELC DIGITAL // SIGNAL FIELD V2.6</text>
+  <text x="876" y="218" class="node-sub" font-size="9" text-anchor="end" opacity="0.7">COORDINATES // 6.5244° N, 3.3792° E</text>
 </svg>

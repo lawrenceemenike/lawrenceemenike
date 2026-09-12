@@ -2,17 +2,27 @@
   <defs>
     <!-- Dark graphite gradient background -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050807"/>
+      <stop offset="0%" stop-color="#040706"/>
       <stop offset="50%" stop-color="#0A0E0D"/>
-      <stop offset="100%" stop-color="#141B19"/>
+      <stop offset="100%" stop-color="#121816"/>
     </linearGradient>
 
-    <!-- Animated Signal Teal Beam -->
+    <!-- DYNAMIC AMBIENT CINEMATIC LIGHT SHIFT -->
+    <radialGradient id="dynamic-bg-light" cx="70%" cy="30%" r="65%">
+      <animate attributeName="cx" values="70%; 30%; 80%; 70%" dur="14s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="30%; 70%; 20%; 30%" dur="14s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#0D8E86" stop-opacity="0.06"/>
+      <stop offset="75%" stop-color="#F26A2E" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#0A0E0D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Animated Signal Teal Wave Beam -->
     <linearGradient id="teal-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0.1"/>
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0"/>
       <stop offset="25%" stop-color="#18C7B5" stop-opacity="0.95"/>
       <stop offset="70%" stop-color="#0D8E86" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#18C7B5" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#18C7B5" stop-opacity="0.1"/>
     </linearGradient>
 
     <!-- Animated Ember Wave Beam -->
@@ -23,14 +33,12 @@
       <stop offset="100%" stop-color="#18C7B5" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Ember node radial glow -->
     <radialGradient id="ember-glow-dynamic" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#F26A2E" stop-opacity="1"/>
       <stop offset="40%" stop-color="#F26A2E" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#F26A2E" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Teal node radial glow -->
     <radialGradient id="teal-glow-dynamic" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#18C7B5" stop-opacity="1"/>
       <stop offset="40%" stop-color="#18C7B5" stop-opacity="0.3"/>
@@ -43,7 +51,6 @@
       <circle cx="40" cy="40" r="1" fill="#18C7B5" fill-opacity="0.2"/>
     </pattern>
 
-    <!-- Subgrid -->
     <pattern id="subgrid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
       <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#8A9691" stroke-opacity="0.025" stroke-width="0.5"/>
     </pattern>
@@ -68,8 +75,9 @@
     .nav-label { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; fill: #8A9691; letter-spacing: 2px; }
   </style>
 
-  <!-- Base Surfaces -->
+  <!-- Base Surfaces with Dynamic Moving Light Leak -->
   <rect width="1000" height="360" rx="8" fill="url(#bg-grad)"/>
+  <rect width="1000" height="360" rx="8" fill="url(#dynamic-bg-light)"/>
   <rect width="1000" height="360" rx="8" fill="url(#subgrid-pattern)"/>
   <rect width="1000" height="360" rx="8" fill="url(#grid-pattern)"/>
 
@@ -80,16 +88,40 @@
   <path d="M 999 336 L 999 359 L 976 359" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="2" fill="none"/>
   <path d="M 24 359 L 1 359 L 1 336" stroke="#18C7B5" stroke-opacity="0.6" stroke-width="2" fill="none"/>
 
-  <!-- Geometric Grid Ray Traces -->
-  <line x1="620" y1="0" x2="820" y2="360" stroke="#18C7B5" stroke-opacity="0.08" stroke-dasharray="4 4"/>
-  <line x1="720" y1="0" x2="920" y2="360" stroke="#18C7B5" stroke-opacity="0.05"/>
-  <line x1="150" y1="0" x2="350" y2="360" stroke="#8A9691" stroke-opacity="0.05" stroke-dasharray="2 4"/>
+  <!-- MOVING GRID SCAN LINES (DYNAMIC TELEMETRY RAYS) -->
+  <g stroke-linecap="round">
+    <line x1="620" y1="0" x2="820" y2="360" stroke="#18C7B5" stroke-opacity="0.18" stroke-dasharray="12 20">
+      <animate attributeName="stroke-dashoffset" values="0; -320" dur="10s" repeatCount="indefinite" />
+    </line>
+    <line x1="720" y1="0" x2="920" y2="360" stroke="#18C7B5" stroke-opacity="0.12" stroke-dasharray="8 16">
+      <animate attributeName="stroke-dashoffset" values="0; 240" dur="8s" repeatCount="indefinite" />
+    </line>
+    <line x1="150" y1="0" x2="350" y2="360" stroke="#F26A2E" stroke-opacity="0.15" stroke-dasharray="10 18">
+      <animate attributeName="stroke-dashoffset" values="0; -280" dur="12s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- FLOATING DATA PARTICLES DRIFTING ACROSS CANVAS -->
+  <g fill="#18C7B5" opacity="0.6" filter="url(#glow-filter)">
+    <circle cx="120" cy="180" r="1.8">
+      <animate attributeName="cx" values="120; 880; 120" dur="20s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="180; 80; 180" dur="15s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="800" cy="260" r="2.2">
+      <animate attributeName="cx" values="800; 200; 800" dur="25s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="260; 120; 260" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="90" r="1.5" fill="#F26A2E">
+      <animate attributeName="cx" values="450; 950; 450" dur="22s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="90; 290; 90" dur="16s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
   <!-- ========================================================================= -->
   <!-- SENTIENT WAVE ORGANISM — SMIL PATH MORPHING ANIMATIONS                     -->
   <!-- ========================================================================= -->
 
-  <!-- WAVE 1: PRIMARY TEAL SENTIENT SIGNAL WAVE (Heavy Glow + Morphing Bezier) -->
+  <!-- WAVE 1: PRIMARY TEAL SENTIENT SIGNAL WAVE -->
   <path fill="none" stroke="url(#teal-wave-grad)" stroke-width="3.5" filter="url(#glow-heavy)">
     <animate attributeName="d"
              dur="7s"
@@ -105,7 +137,7 @@
              "/>
   </path>
 
-  <!-- WAVE 2: SECONDARY EMBER SENTIENT ENERGY WAVE (Counter-Motion Morphing) -->
+  <!-- WAVE 2: SECONDARY EMBER SENTIENT ENERGY WAVE -->
   <path fill="none" stroke="url(#ember-wave-grad)" stroke-width="2.5" filter="url(#glow-filter)">
     <animate attributeName="d"
              dur="9s"
@@ -121,7 +153,7 @@
              "/>
   </path>
 
-  <!-- WAVE 3: TERTIARY HIGH-FREQUENCY TEAL RIPPLE -->
+  <!-- WAVE 3: TERTIARY HIGH-FREQUENCY RIPPLE -->
   <path fill="none" stroke="#18C7B5" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="8 6">
     <animate attributeName="d"
              dur="6s"
@@ -137,11 +169,7 @@
              "/>
   </path>
 
-  <!-- ========================================================================= -->
-  <!-- DYNAMIC SENTIENT NODES (Moving vertically/horizontally along waves)       -->
-  <!-- ========================================================================= -->
-
-  <!-- Primary Ember Node Floating Dynamically -->
+  <!-- DYNAMIC SENTIENT NODES -->
   <g transform="translate(0, 0)">
     <circle cx="520" cy="160" r="18" fill="url(#ember-glow-dynamic)">
       <animate attributeName="cy" dur="7s" repeatCount="indefinite" values="160; 170; 240; 120; 160" />
@@ -212,23 +240,18 @@
   <g transform="translate(40, 310)">
     <line x1="0" y1="0" x2="920" y2="0" stroke="#18C7B5" stroke-opacity="0.2" stroke-width="1"/>
     
-    <!-- Signal pulse indicator line -->
     <line x1="0" y1="0" x2="180" y2="0" stroke="#18C7B5" stroke-width="2" filter="url(#glow-filter)"/>
 
     <g transform="translate(0, 24)">
-      <!-- Domain 1 -->
       <circle cx="6" cy="-4" r="3" fill="#18C7B5"/>
       <text x="16" y="0" class="nav-label">AI STRATEGY</text>
 
-      <!-- Domain 2 -->
       <circle cx="236" cy="-4" r="3" fill="#18C7B5"/>
       <text x="246" y="0" class="nav-label">GOVERNANCE &amp; RISK</text>
 
-      <!-- Domain 3 -->
       <circle cx="506" cy="-4" r="3" fill="#F26A2E"/>
       <text x="516" y="0" class="nav-label" fill="#F3F0E7">AI SECURITY</text>
 
-      <!-- Domain 4 -->
       <circle cx="736" cy="-4" r="3" fill="#18C7B5"/>
       <text x="746" y="0" class="nav-label">FINAI &amp; VALUE</text>
     </g>

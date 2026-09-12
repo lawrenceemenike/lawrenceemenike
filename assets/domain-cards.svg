@@ -1,10 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="100%" height="100%">
   <defs>
     <linearGradient id="dom-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060908"/>
+      <stop offset="0%" stop-color="#040706"/>
       <stop offset="50%" stop-color="#0A0E0D"/>
       <stop offset="100%" stop-color="#141B19"/>
     </linearGradient>
+
+    <!-- DYNAMIC AMBIENT LIGHT SHIFT FOR DOMAIN CARDS -->
+    <radialGradient id="dynamic-dom-light" cx="30%" cy="40%" r="60%">
+      <animate attributeName="cx" values="30%; 70%; 40%; 30%" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="40%; 70%; 30%; 40%" dur="15s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#18C7B5" stop-opacity="0.14"/>
+      <stop offset="50%" stop-color="#F26A2E" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0A0E0D" stop-opacity="0"/>
+    </radialGradient>
 
     <pattern id="dom-grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#18C7B5" stroke-opacity="0.04" stroke-width="1"/>
@@ -30,18 +39,19 @@
     .dom-tag-ember { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #F26A2E; opacity: 0.9; }
   </style>
 
-  <!-- Base Grid Layout (5 Operating Domains) -->
-
   <!-- ROW 1: CARDS 1, 2, 3 -->
 
   <!-- CARD 01: AI Strategy & Transformation -->
   <g transform="translate(0, 0)">
     <rect width="318" height="195" rx="6" fill="url(#dom-bg)"/>
+    <rect width="318" height="195" rx="6" fill="url(#dynamic-dom-light)"/>
     <rect width="318" height="195" rx="6" fill="url(#dom-grid)"/>
     <rect x="1" y="1" width="316" height="193" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
     
     <text x="20" y="30" class="dom-num">DOMAIN // 01</text>
-    <circle cx="295" cy="26" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    <circle cx="295" cy="26" r="3" fill="#18C7B5" filter="url(#glow-teal)">
+      <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+    </circle>
     
     <text x="20" y="56" class="dom-title">AI Strategy &amp; Transformation</text>
     <text x="20" y="80" class="dom-desc">Organizational readiness diagnostic,</text>
@@ -55,11 +65,14 @@
   <!-- CARD 02: AI-Native Operating Models -->
   <g transform="translate(341, 0)">
     <rect width="318" height="195" rx="6" fill="url(#dom-bg)"/>
+    <rect width="318" height="195" rx="6" fill="url(#dynamic-dom-light)"/>
     <rect width="318" height="195" rx="6" fill="url(#dom-grid)"/>
     <rect x="1" y="1" width="316" height="193" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
     
     <text x="20" y="30" class="dom-num">DOMAIN // 02</text>
-    <circle cx="295" cy="26" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    <circle cx="295" cy="26" r="3" fill="#18C7B5" filter="url(#glow-teal)">
+      <animate attributeName="opacity" dur="2.2s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+    </circle>
     
     <text x="20" y="56" class="dom-title">AI-Native Operating Models</text>
     <text x="20" y="80" class="dom-desc">Redesigning enterprise architecture,</text>
@@ -73,11 +86,14 @@
   <!-- CARD 03: Agentic AI Strategy & Architecture -->
   <g transform="translate(682, 0)">
     <rect width="318" height="195" rx="6" fill="url(#dom-bg)"/>
+    <rect width="318" height="195" rx="6" fill="url(#dynamic-dom-light)"/>
     <rect width="318" height="195" rx="6" fill="url(#dom-grid)"/>
     <rect x="1" y="1" width="316" height="193" rx="5" fill="none" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
     
     <text x="20" y="30" class="dom-num-ember">DOMAIN // 03 [AGENTIC]</text>
-    <circle cx="295" cy="26" r="3.5" fill="#F26A2E" filter="url(#glow-ember)"/>
+    <circle cx="295" cy="26" r="3.5" fill="#F26A2E" filter="url(#glow-ember)">
+      <animate attributeName="opacity" dur="1.8s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+    </circle>
     
     <text x="20" y="56" class="dom-title">Agentic AI Implementation</text>
     <text x="20" y="80" class="dom-desc">Multi-agent system architecture,</text>
@@ -93,11 +109,14 @@
   <!-- CARD 04: AI Governance, Security & Resilience -->
   <g transform="translate(0, 220)">
     <rect width="490" height="215" rx="6" fill="url(#dom-bg)"/>
+    <rect width="490" height="215" rx="6" fill="url(#dynamic-dom-light)"/>
     <rect width="490" height="215" rx="6" fill="url(#dom-grid)"/>
     <rect x="1" y="1" width="488" height="213" rx="5" fill="none" stroke="#F26A2E" stroke-opacity="0.35" stroke-width="1"/>
     
     <text x="24" y="32" class="dom-num-ember">DOMAIN // 04 [GOVERNANCE &amp; RESILIENCE]</text>
-    <circle cx="465" cy="28" r="3.5" fill="#F26A2E" filter="url(#glow-ember)"/>
+    <circle cx="465" cy="28" r="3.5" fill="#F26A2E" filter="url(#glow-ember)">
+      <animate attributeName="opacity" dur="2.5s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+    </circle>
     
     <text x="24" y="60" class="dom-title">AI Governance, Security &amp; Resilience</text>
     <text x="24" y="86" class="dom-desc">Audit-ready governance frameworks, risk classification, responsible AI</text>
@@ -110,11 +129,14 @@
   <!-- CARD 05: Commercial Intelligence & Decision Systems -->
   <g transform="translate(510, 220)">
     <rect width="490" height="215" rx="6" fill="url(#dom-bg)"/>
+    <rect width="490" height="215" rx="6" fill="url(#dynamic-dom-light)"/>
     <rect width="490" height="215" rx="6" fill="url(#dom-grid)"/>
     <rect x="1" y="1" width="488" height="213" rx="5" fill="none" stroke="#18C7B5" stroke-opacity="0.25" stroke-width="1"/>
     
     <text x="24" y="32" class="dom-num">DOMAIN // 05 [DECISION INTELLIGENCE]</text>
-    <circle cx="465" cy="28" r="3" fill="#18C7B5" filter="url(#glow-teal)"/>
+    <circle cx="465" cy="28" r="3" fill="#18C7B5" filter="url(#glow-teal)">
+      <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.4; 1; 0.4" />
+    </circle>
     
     <text x="24" y="60" class="dom-title">Commercial Intelligence &amp; AI Decision Systems</text>
     <text x="24" y="86" class="dom-desc">Financial modeling for AI investment, token unit economics, FinOps,</text>

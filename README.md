@@ -6,7 +6,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 -->
 
 <p align="center">
-  <img src="./assets/nelc-signal-hero.svg?v=7" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
+  <img src="./assets/nelc-signal-hero.svg?v=8" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ---
 
 <p align="center">
-  <img src="./assets/positioning-card.svg?v=7" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+  <img src="./assets/positioning-card.svg?v=8" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
 </p>
 
 ---
@@ -28,7 +28,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 01 / SYSTEM MANIFEST
 
 <p align="center">
-  <img src="./assets/manifest-card.svg?v=7" alt="System Manifest Card" width="100%" />
+  <img src="./assets/manifest-card.svg?v=8" alt="System Manifest Card" width="100%" />
 </p>
 
 ---
@@ -36,7 +36,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 02 / OPERATING DOMAINS
 
 <p align="center">
-  <img src="./assets/domain-cards.svg?v=7" alt="NELC Operating Domains" width="100%" />
+  <img src="./assets/domain-cards.svg?v=8" alt="NELC Operating Domains" width="100%" />
 </p>
 
 ---
@@ -44,7 +44,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 03 / SELECTED SYSTEMS & FRAMEWORKS
 
 <p align="center">
-  <img src="./assets/systems-card.svg?v=7" alt="NELC Selected Systems & Enterprise Frameworks" width="100%" />
+  <img src="./assets/systems-card.svg?v=8" alt="NELC Selected Systems & Enterprise Frameworks" width="100%" />
 </p>
 
 ---
@@ -52,7 +52,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 04 / SIGNALS // THOUGHT LEADERSHIP
 
 <p align="center">
-  <img src="./assets/signals-card.svg?v=7" alt="NELC Thought Leadership Signals Header Card" width="100%" />
+  <img src="./assets/signals-card.svg?v=8" alt="NELC Thought Leadership Signals Header Card" width="100%" />
 </p>
 
 - **`SIGNAL_001`** — [**The Economics of AI: From Labor Substitution to Complementarities**](https://lawrence-emenike.medium.com/the-economics-of-ai-from-labor-substitution-to-complementarities-531f235780bc)  
@@ -75,7 +75,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 05 / SIGNATURE SIGNAL FIELD
 
 <p align="center">
-  <img src="./assets/signal-field.svg?v=7" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
+  <img src="./assets/signal-field.svg?v=8" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
 </p>
 
 ---
