@@ -6,7 +6,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 -->
 
 <p align="center">
-  <img src="./assets/nelc-signal-hero.svg?v=4" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
+  <img src="./assets/nelc-signal-hero.svg?v=5" alt="NELC // SIGNAL ROOM - Intelligence Systems for Transformation" width="100%" />
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ---
 
 <p align="center">
-  <img src="./assets/positioning-card.svg?v=4" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
+  <img src="./assets/positioning-card.svg?v=5" alt="NELC Operating Philosophy & Strategic Positioning" width="100%" />
 </p>
 
 ---
@@ -28,7 +28,7 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 01 / SYSTEM MANIFEST
 
 <p align="center">
-  <img src="./assets/manifest-card.svg?v=4" alt="System Manifest Card" width="100%" />
+  <img src="./assets/manifest-card.svg?v=5" alt="System Manifest Card" width="100%" />
 </p>
 
 ---
@@ -36,57 +36,8 @@ AI Transformation Consultant · Agentic AI Engineer · Founder, Nelc Digital
 ## 02 / OPERATING DOMAINS
 
 <p align="center">
-  <img src="./assets/domain-cards.svg?v=4" alt="NELC Operating Domains" width="100%" />
+  <img src="./assets/domain-cards.svg?v=5" alt="NELC Operating Domains" width="100%" />
 </p>
-
-<table width="100%">
-<tr>
-<td width="50%">
-
-### 01. AI Strategy & Transformation
-* **Focus**: Readiness assessments, strategy roadmaps, executive alignment, and priority use-case triage.
-* **Impact**: Transitioning enterprises from isolated AI experiments to systematic, value-accretive operating models.
-* **Deliverables**: AI Maturity Frameworks, Transformation Roadmaps, C-Suite Decision Briefings.
-
-</td>
-<td width="50%">
-
-### 02. AI-Native Operating Models & Workflows
-* **Focus**: Enterprise workflow redesign, intelligent automation, human-in-the-loop operational integration.
-* **Impact**: Re-engineering core operational processes around real-time intelligence engines.
-* **Deliverables**: Operating Layer Blueprints, Workflow Specs, Integration Specs.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 03. Agentic AI Strategy & Architecture
-* **Focus**: Multi-agent system design, autonomous tool execution, orchestration engines, production deployment.
-* **Impact**: Deploying trustworthy autonomous agent fleets with resilient state management and permission boundaries.
-* **Deliverables**: Agent Architecture Specs, Tool-Call Harnesses, Orchestration Engines.
-
-</td>
-<td width="50%">
-
-### 04. AI Governance, Security & Resilience
-* **Focus**: Governance control frameworks, risk classification, prompt injection defenses, agent trust boundaries.
-* **Impact**: Ensuring regulatory compliance, auditability, and protection against emerging agentic attack vectors.
-* **Deliverables**: Model Risk Registries, Threat Matrix Models, Injection Countermeasures.
-
-</td>
-</tr>
-<tr>
-<td colspan="2" width="100%">
-
-### 05. Commercial Intelligence & AI-Powered Decision Systems
-* **Focus**: Financial modeling for AI investment, token unit economics, FinOps, automated commercial decision engines.
-* **Impact**: Aligning raw model capabilities with financial return, cost predictability, and unit margin growth.
-* **Deliverables**: FinOps Cost Engines, Token Economics Calculators, Commercial Decision Dashboards.
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -138,7 +89,7 @@ Curated writing, architectural frameworks, and research papers on AI implementat
 ## 05 / SIGNATURE SIGNAL FIELD
 
 <p align="center">
-  <img src="./assets/signal-field.svg?v=4" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
+  <img src="./assets/signal-field.svg?v=5" alt="NELC Signal Field - Abstract Data & Governance Contours" width="100%" />
 </p>
 
 ---
